@@ -1,4 +1,4 @@
-package network;
+package network.server;
 
 import java.rmi.NoSuchObjectException;
 import java.rmi.RemoteException;
@@ -6,7 +6,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-import network.IServer;
+import network.i.IServer;
 
 public class ServerDriver {
 

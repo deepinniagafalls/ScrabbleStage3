@@ -1,4 +1,4 @@
-package network;
+package network.client;
 
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
@@ -8,7 +8,7 @@ import java.rmi.registry.Registry;
 
 import javax.swing.SwingUtilities;
 
-import network.IServer;
+import network.i.IServer;
 
 public class ClientDriver {
 

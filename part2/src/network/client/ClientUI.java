@@ -1,4 +1,4 @@
-package network;
+package network.client;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -12,8 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import network.IClient;
-import network.IServer;
+import network.i.IClient;
+import network.i.IServer;
 
 public class ClientUI implements Runnable, IClient {
 

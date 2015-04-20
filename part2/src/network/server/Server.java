@@ -1,10 +1,10 @@
-package network;
+package network.server;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-import network.IClient;
-import network.IServer;
+import network.i.IClient;
+import network.i.IServer;
 
 /**
  * A simple server that records how many votes are cast.

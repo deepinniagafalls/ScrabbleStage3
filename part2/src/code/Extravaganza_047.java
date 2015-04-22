@@ -29,7 +29,9 @@ import code.base.Tile_024;
  * @date 2015-APRIL-10
  * The Extravaganza class creates a window that allows for saving, restoring, and passing turn functionality.
  */
+
 public class Extravaganza_047 extends JFrame {
+	// This class is a mess, but we didn't have any other choice.
 
 	/**
 	 * @author tylerdie (Tyler Dietrich)

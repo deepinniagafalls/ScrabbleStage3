@@ -11,6 +11,7 @@ public class Tile_024 {
 	 */
 	private int _pointValue;
 	
+	
 	/**
 	 * Class constructor.
 	 * 

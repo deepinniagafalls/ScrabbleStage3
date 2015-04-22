@@ -133,7 +133,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @param s: the reference to the scrabble game
 	 * @param bf: the reference to the current boardframe
 	 */
-	public TileSpace_047(int x, int y, Scrabble_024_047 s, BoardFrame_047 bf){
+	public TileSpace_047(int x, int y, Scrabble_024_047 s, BoardFrame_047 bf, int letterMultiplier, int wordMultiplier){
 		_j = this;
 		_bf = bf;
 		_row = x;
@@ -142,7 +142,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 		_i = s.getInv();
 		_players = s.getPlayers();
 		_scrabble = s;
-		
+		this.setText(letterMultiplier + " " + wordMultiplier);
 		
 		this.addActionListener(new ActionListener() {
 			/**

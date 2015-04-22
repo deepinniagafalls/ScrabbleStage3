@@ -1,5 +1,8 @@
 package code.base;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 
 public class Board_024 {
 
@@ -8,11 +11,77 @@ public class Board_024 {
 	 */
 	private Tile_024[][] _board;
 	private Tile_024 _tempTile;
+	
+	/**
+	 * Stores all 400 individual letter multipliers on the board
+	 */
+	private int[] _letterMultipliers = new int[400];
+	
+	/**
+	 * Stores all 400 whole word multipliers on the board
+	 */
+	private int[] _wordMultipliers = new int[400];
+	
+	private ArrayList<Integer> _letterIndexRepeats = new ArrayList<Integer>();
+	
+	private ArrayList<Integer> _wordIndexRepeats = new ArrayList<Integer>();
+	
 	/**
 	 * Class constructor.
 	 */
 	public Board_024(){
+		Random rand = new Random();
+		
 		_board = new Tile_024[20][20];
+		
+		for(int i=0; i<60; i++){
+			int temp = rand.nextInt(400);
+			while(_letterIndexRepeats.contains(temp)){
+				temp = rand.nextInt(400);
+			}
+			_letterIndexRepeats.add(temp);
+			_letterMultipliers[temp] = 2;
+		}
+		for(int i=0; i<40; i++){
+			int temp = rand.nextInt(400);
+			while(_letterIndexRepeats.contains(temp)){
+				temp = rand.nextInt(400);
+			}
+			_letterIndexRepeats.add(temp);
+			_letterMultipliers[temp] = 3;
+		}
+		for(int i=0; i<300; i++){
+			int temp = rand.nextInt(400);
+			while(_letterIndexRepeats.contains(temp)){
+				temp = rand.nextInt(400);
+			}
+			_letterIndexRepeats.add(temp);
+			_letterMultipliers[temp] = 1;
+		}
+		for(int i=0; i<40; i++){
+			int temp = rand.nextInt(400);
+			while(_wordIndexRepeats.contains(temp)){
+				temp = rand.nextInt(400);
+			}
+			_wordIndexRepeats.add(temp);
+			_wordMultipliers[temp] = 2;
+		}
+		for(int i=0; i<20; i++){
+			int temp = rand.nextInt(400);
+			while(_wordIndexRepeats.contains(temp)){
+				temp = rand.nextInt(400);
+			}
+			_wordIndexRepeats.add(temp);
+			_wordMultipliers[temp] = 3;
+		}
+		for(int i=0; i<340; i++){
+			int temp = rand.nextInt(400);
+			while(_wordIndexRepeats.contains(temp)){
+				temp = rand.nextInt(400);
+			}
+			_wordIndexRepeats.add(temp);
+			_wordMultipliers[temp] = 1;
+		}
 	}
 
 	/**
@@ -56,5 +125,13 @@ public class Board_024 {
 	
 	public Tile_024 getTempTile(){
 		return _tempTile;
+	}
+	
+	public int getLetterMultiplier(int index){
+		return _letterMultipliers[index];
+	}
+	
+	public int getWordMultiplier(int index){
+		return _wordMultipliers[index];
 	}
 }

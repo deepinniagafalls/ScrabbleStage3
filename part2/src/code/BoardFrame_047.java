@@ -1,6 +1,5 @@
 package code;
 import java.awt.Dimension;
-
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -11,6 +10,7 @@ import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
+import code.base.Tile_024;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -168,7 +168,9 @@ public class BoardFrame_047 extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				TileSpace_047 j = new TileSpace_047(row, col, _s, _bf);
+				int letterMultiplier = _board.getLetterMultiplier((row*20)+col);
+				int wordMultiplier = _board.getWordMultiplier((row*20)+col);
+				TileSpace_047 j = new TileSpace_047(row, col, _s, _bf, letterMultiplier, wordMultiplier);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}

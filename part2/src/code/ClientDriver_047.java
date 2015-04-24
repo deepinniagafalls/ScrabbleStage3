@@ -24,6 +24,10 @@ public class ClientDriver_047 {
 			System.out.println("Only Four People can Play at Once!");
 			System.exit(0);
 		}
+		else if(names.size() == 0){
+			System.out.println("At least one man should be playing!");
+			System.exit(0);
+		}
 		ClientGUI gui = new ClientGUI(names);
 		//Game_047 g = new Game_047("GUI", false);
 	}

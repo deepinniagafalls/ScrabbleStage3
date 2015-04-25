@@ -10,6 +10,7 @@ import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 
 public class ClientGUI {
+	// NOT FINISHED yet
 	ArrayList<PlayerFrame_047> _playerFrameList;
 	ArrayList<Player_024_047> _playerList;
 	int _numberOfPlayers;

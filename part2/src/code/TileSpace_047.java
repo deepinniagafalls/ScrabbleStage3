@@ -12,6 +12,7 @@ import code.base.Inventory_024;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;
+import code.client.BoardFrame_047;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)

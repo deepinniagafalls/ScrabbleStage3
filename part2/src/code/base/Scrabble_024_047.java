@@ -5,7 +5,7 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-import code.Game_047;
+import code.client.Game_047;
 
 public class Scrabble_024_047 {
 	

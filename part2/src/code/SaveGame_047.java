@@ -14,6 +14,8 @@ import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.TileRack_024;
 import code.base.Inventory_024;
+import code.client.BoardFrame_047;
+import code.client.PlayerFrame_047;
 
 /**
  * @author tylerdie (Tyler Dietrich)

@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 import code.base.Board_024;
 import code.base.Scrabble_024_047;
 import code.base.TileRack_024;
+import code.client.BoardFrame_047;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)

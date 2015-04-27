@@ -1,4 +1,4 @@
-package code;
+package code.client;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -17,6 +17,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import code.LoadGame_047;
+import code.SaveGame_047;
+import code.WordChecker_047;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;

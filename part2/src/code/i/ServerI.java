@@ -1,0 +1,10 @@
+package code.i;
+
+import java.rmi.Remote;
+
+public interface ServerI extends Remote {
+	//this interface specifies all the methods that are to be called by a client to a server.
+	// Client -> this -> Methods in Server
+
+
+}

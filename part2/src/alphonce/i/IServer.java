@@ -1,4 +1,4 @@
-package network.i;
+package alphonce.i;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

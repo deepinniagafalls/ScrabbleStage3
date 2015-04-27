@@ -1,10 +1,10 @@
-package network.server;
+package alphonce.server;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-import network.i.IClient;
-import network.i.IServer;
+import alphonce.i.IClient;
+import alphonce.i.IServer;
 
 /**
  * A simple server that records how many votes are cast.

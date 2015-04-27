@@ -1,5 +1,6 @@
 package code.client;
 
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 import javax.swing.UIManager;
@@ -8,8 +9,9 @@ import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
+import code.i.ClientI;
 
-public class ClientGUI {
+public class ClientGUI implements Runnable, ClientI {
 	// NOT FINISHED yet
 	ArrayList<PlayerFrame_047> _playerFrameList;
 	ArrayList<Player_024_047> _playerList;
@@ -27,6 +29,16 @@ public class ClientGUI {
 			_playerList = scrabble.getPlayers();
 			_playerFrameList = new ArrayList<PlayerFrame_047>();
 
+	}
+	@Override
+	public void update() throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -2,7 +2,10 @@ package code.server;
 
 import code.i.ServerI;
 
-public class ServerUI implements ServerI, Runnable {
+public class Server implements ServerI, Runnable {
+	public Server(){
+		
+	}
 
 	@Override
 	public void run() {

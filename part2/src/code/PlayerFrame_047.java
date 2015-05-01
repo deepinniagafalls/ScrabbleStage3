@@ -153,6 +153,8 @@ public class PlayerFrame_047 {
 	 * Instance variable that holds reference to the points that the players begins with
 	 */
 	private JLabel _points = new JLabel("Points: 0000");
+	
+	private PlayerSpace_047 _previousPlayerSpace;
 
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -300,6 +302,14 @@ public class PlayerFrame_047 {
 	 */
 	public int getMyTurnNumber(){
 		return _myTurnNumber;
+	}
+	
+	public void setPreviousPlayerSpace(PlayerSpace_047 temp){
+		_previousPlayerSpace = temp;
+	}
+	
+	public PlayerSpace_047 getPreviousPlayerSpace(){
+		return _previousPlayerSpace;
 	}
 	
 }

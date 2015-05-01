@@ -133,7 +133,7 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 						if(_pf.getBoard().getTempTile()!=null){
 							Tile_024 temp = _pf.getBoard().getTempTile();
 							for(int i=0; i<12; i++){
-								if(_pf.getPlayerSpace(i).getTile() == null){
+								if(_pf.getPlayerSpace(i).equals(_pf.getPreviousPlayerSpace())){
 									_pf.getPlayerSpace(i).setCurrentTile(_playerSpace.getTile());
 									_pf.getPlayerSpace(i).setText(Character.toString(_playerSpace.getTile().getChar()) + "," + _playerSpace.getTile().getValue());
 								}
@@ -147,6 +147,7 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 							_playerSpace.setText(""); 
 							_tempTH = _t;
 							_pf.getBoard().setTempTile(_tempTH);
+							_pf.setPreviousPlayerSpace(_playerSpace);
 							_playerSpace.setCurrentTile(null);
 							_pf.setCurrent(_playerSpace);
 						}

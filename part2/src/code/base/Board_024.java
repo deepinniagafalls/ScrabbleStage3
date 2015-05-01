@@ -134,4 +134,12 @@ public class Board_024 {
 	public int getWordMultiplier(int index){
 		return _wordMultipliers[index];
 	}
+	
+	public void setLetterMultiplier(int index){
+		_letterMultipliers[index] = 1;
+	}
+	
+	public void setWordMultipliers(int index){
+		_wordMultipliers[index] = 1;
+	}
 }

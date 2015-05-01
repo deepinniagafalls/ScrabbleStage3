@@ -254,14 +254,17 @@ public class WordChecker_047 {
 			int counter = 0;
 			for(int i = 0; i < 12; i ++){
 				if(current.getPlayerSpace(i).getTile() == null){
-					System.out.println(i);
 					current.getPlayerSpace(i).setCurrentTile(_tilesPlaced.get(counter));
 					current.getPlayerSpace(i).setText(Character.toString(_tilesPlaced.get(counter).getChar()) + "," + _tilesPlaced.get(counter).getValue());
 					counter = counter + 1;
 				}
 			}
 			for(int i = 0; i < _rowCoordinates.size(); i ++){
-				_bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i)).setText("");
+				//Right here
+				TileSpace_047 tileToReplaceMultipliers = _bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i));
+				int letterMultiplier = _b.getLetterMultiplier(_rowCoordinates.get(i)*20+_colCoordinates.get(i));
+				int wordMultiplier = _b.getWordMultiplier(_rowCoordinates.get(i)*20+_colCoordinates.get(i));
+				tileToReplaceMultipliers.setText(letterMultiplier + " " + wordMultiplier);
 				_bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i)).setBackground(new JButton().getBackground());
 				_b.removeTile(_rowCoordinates.get(i), _colCoordinates.get(i));
 			}
@@ -334,4 +337,14 @@ public class WordChecker_047 {
 	public boolean isZero(){
 		return _rowCoordinates.size() == 0;
 	}
+	
+	public ArrayList<Integer> getRowCoordinates(){
+		return _rowCoordinates;
+	}
+	
+	public ArrayList<Integer> getColCoordinates(){
+		return _colCoordinates;
+	}
+	
+	
 }

@@ -20,9 +20,12 @@ import javax.swing.UIManager;
 import code.LoadGame_047;
 import code.SaveGame_047;
 import code.WordChecker_047;
+import code.base.Board_024;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;
+import code.client.BoardFrame_047;
+import code.client.Game_047;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -80,6 +83,16 @@ public class Extravaganza_047 extends JFrame {
 	 * Holds a reference to a BoardFrame where tiles will be placed on
 	 */
 	private BoardFrame_047 _bf;
+	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Holds a reference to a Board model for the game
+	 */
+	private Board_024 _b;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -168,6 +181,7 @@ public class Extravaganza_047 extends JFrame {
 	    JFrame frame = new JFrame();   
 		JPanel p = new JPanel();
 		_scrabble = scrabble;
+		_b = _scrabble.getBoard();
 		_bf = bf;
 		_g = g;
 		
@@ -340,7 +354,7 @@ public class Extravaganza_047 extends JFrame {
 			
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
 			int tep = _g.getCurrentTurn();
-			PlayerFrame_047 temp = _bf.getPlayerFrame(_g.getCurrentTurn());
+			code.client.PlayerFrame_047 temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){ //Refills empty PlayerSpaces in the PlayerFrame
 				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile_024 t = _scrabble.getInv().removeRandomTile();
@@ -366,9 +380,86 @@ public class Extravaganza_047 extends JFrame {
 			if(wordToScore != null){
 				//New Stuff
 				_scrabble.setIsVeryFirstTurn(false);
+				ArrayList<Integer> tempRows = _bf.getWordChecker().getRowCoordinates();
+				ArrayList<Integer> tempCols = _bf.getWordChecker().getColCoordinates();
+				ArrayList<Integer> correctRows = new ArrayList<Integer>();
+				ArrayList<Integer> correctCols = new ArrayList<Integer>();
+				
+				//Generates values for correctRows
+				correctRows.add(tempRows.get(0));
+				int rowCount = tempRows.get(0);
+				while(rowCount < tempRows.get(tempRows.size()-1)){
+					rowCount ++;
+					correctRows.add(rowCount);
+				}
+				
+				//Generates values for correctCols
+				correctCols.add(tempCols.get(0));
+				int colCount = tempCols.get(0);
+				while(colCount < tempCols.get(tempCols.size()-1)){
+					colCount ++;
+					correctCols.add(colCount);
+				}
+				
+				System.out.println(wordToScore);
+				
+				System.out.println("Row Coordinates");
+				for(int i=0; i<correctRows.size(); i++){
+					System.out.println(correctRows.get(i));
+				}
+				System.out.println("Col Coordinates");
+				for(int i=0; i<correctCols.size(); i++){
+					System.out.println(correctCols.get(i));
+				}
+				
 				int sum = 0;
-				for(int i=0; i<wordToScore.length();i++){
-					sum = sum + scoreHelper(wordToScore.charAt(i));
+				int wordMultiplierSum = 0;
+				boolean isRowLongerThanCol = correctRows.size() > correctCols.size();
+				
+				//Caluclates score if word is vertical
+				if(isRowLongerThanCol){
+					for(int i=0; i<correctRows.size();i++){
+						sum = sum + _b.getLetterMultiplier(((correctRows.get(i))*20)+(correctCols.get(0)))*scoreHelper(wordToScore.charAt(i));
+						_b.setLetterMultiplier(((correctRows.get(i))*20)+(correctCols.get(0)));
+					}
+					for(int i=0; i<correctRows.size();i++){
+						if(_b.getWordMultiplier((correctRows.get(i))*20+(correctCols.get(0)))==1){
+							//Do nothing
+						}
+						else{
+							wordMultiplierSum = wordMultiplierSum + _b.getWordMultiplier(correctRows.get(i)*20+correctCols.get(0));
+							_b.setWordMultipliers((correctRows.get(i))*20+(correctCols.get(0)));
+						}
+					}
+					if(wordMultiplierSum == 0){
+						//Do nothing
+					}
+					else{
+					sum = sum*wordMultiplierSum;
+					}
+				}
+				else{ //Calculates score if word is horizontal
+					for(int i=0; i<correctCols.size();i++){
+						sum = sum + _b.getLetterMultiplier(((correctRows.get(0))*20)+(correctCols.get(i)))*scoreHelper(wordToScore.charAt(i));
+						_b.setLetterMultiplier(((correctRows.get(0))*20)+(correctCols.get(i)));
+					}
+					for(int i=0; i<correctCols.size();i++){
+						if(_b.getWordMultiplier((correctRows.get(0))*20+(correctCols.get(i)))==1){
+							//Do nothing
+						}
+						else{
+							wordMultiplierSum = wordMultiplierSum + _b.getWordMultiplier(correctRows.get(0)*20+correctCols.get(i));
+							_b.setWordMultipliers((correctRows.get(0))*20+(correctCols.get(i)));
+						}
+					}
+					if(wordMultiplierSum == 0){
+						//Do nothing
+					}
+					else{
+						System.out.println("Word multiply");
+					System.out.println(wordMultiplierSum);
+					sum = sum*wordMultiplierSum;
+					}
 				}
 				Player_024_047 tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
 				tempPlayer.addScore(tempPlayer.getScore(), sum);

@@ -3,9 +3,9 @@ package tests.base;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
-import code.Game_047;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
+import code.client.Game_047;
 
 public class PlayerTest {
 	//test that initial score at new game is 0

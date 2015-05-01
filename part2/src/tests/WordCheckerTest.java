@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import code.BoardFrame_047;
+import code.client.BoardFrame_047;
 
 public class WordCheckerTest {
 

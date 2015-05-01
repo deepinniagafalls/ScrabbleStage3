@@ -7,6 +7,8 @@ import javax.swing.JButton;
 
 import code.base.Board_024;
 import code.base.Tile_024;
+import code.client.BoardFrame_047;
+import code.client.PlayerFrame_047;
 import code.util.ReaderTool_047;
 /**
  * @author tylerdie (Tyler Dietrich)

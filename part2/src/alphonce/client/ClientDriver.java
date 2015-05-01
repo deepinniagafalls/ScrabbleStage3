@@ -1,4 +1,4 @@
-package network.client;
+package alphonce.client;
 
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
@@ -8,7 +8,7 @@ import java.rmi.registry.Registry;
 
 import javax.swing.SwingUtilities;
 
-import network.i.IServer;
+import alphonce.i.IServer;
 
 public class ClientDriver {
 

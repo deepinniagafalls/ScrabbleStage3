@@ -1,4 +1,4 @@
-package code;
+package code.client;
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -12,6 +12,9 @@ import javax.swing.UIManager;
 
 
 
+
+
+import code.PlayerSpace_047;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;

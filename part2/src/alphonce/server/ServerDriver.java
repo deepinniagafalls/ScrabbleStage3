@@ -1,4 +1,4 @@
-package network.server;
+package alphonce.server;
 
 import java.rmi.NoSuchObjectException;
 import java.rmi.RemoteException;
@@ -6,7 +6,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-import network.i.IServer;
+import alphonce.i.IServer;
 
 public class ServerDriver {
 

@@ -1,4 +1,4 @@
-package code;
+package code.client;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import code.TileSpace_047;
+import code.WordChecker_047;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;

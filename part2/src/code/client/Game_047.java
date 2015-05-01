@@ -1,4 +1,4 @@
-package code;
+package code.client;
 
 import java.io.Console;
 import java.io.IOException;
@@ -97,11 +97,6 @@ public class Game_047 {
 	private ArrayList<String> _names = new ArrayList<>();
 	
 	public Game_047(String s, boolean mode) throws IOException{
-	       try {
-	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
-	        } catch(Exception e) {
-	            e.printStackTrace();
-	        }
 	       String e1 = "";
 	       String e2 = "";
 	       String e3 = "";

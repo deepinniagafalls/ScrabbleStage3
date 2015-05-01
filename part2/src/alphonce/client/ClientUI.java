@@ -1,4 +1,4 @@
-package network.client;
+package alphonce.client;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -12,8 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import network.i.IClient;
-import network.i.IServer;
+import alphonce.i.IClient;
+import alphonce.i.IServer;
 
 public class ClientUI implements Runnable, IClient {
 

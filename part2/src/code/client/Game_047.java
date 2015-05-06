@@ -241,6 +241,7 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
 		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path);
+		/*
 		try {
 			boolean retry = false;
 			do {
@@ -275,6 +276,7 @@ public class Game_047 implements Runnable, ClientI {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		*/
 	}
 
 	

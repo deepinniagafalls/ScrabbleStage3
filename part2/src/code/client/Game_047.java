@@ -269,7 +269,7 @@ public class Game_047 implements Runnable, ClientI {
 			System.exit(1);
 		}
 		try {
-			_server.addIClient(me);
+			_server.addClientI(me);
 		} catch (RemoteException e) {
 			System.err.println("[CLIENT] Could not register with remote server.");
 			e.printStackTrace();

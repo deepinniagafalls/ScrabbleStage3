@@ -3,6 +3,8 @@ package code.client;
 import java.io.Console;
 import java.io.IOException;
 import java.rmi.RemoteException;
+import java.rmi.server.ExportException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,12 +12,15 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import alphonce.i.IClient;
+import alphonce.i.IServer;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 import code.i.ClientI;
+import code.i.ServerI;
 import code.util.ReaderTool_047;
 
 import java.util.Scanner.*;
@@ -97,9 +102,12 @@ public class Game_047 implements Runnable, ClientI {
 	 */
 	
 	private ArrayList<String> _names = new ArrayList<>();
+	private ServerI _server;
 	
-	public Game_047(String s, boolean mode) throws IOException{
-	       String e1 = "";
+	public Game_047(String s, boolean mode, String hostName, String portNumber, ServerI sv) throws IOException{
+		   _server = sv;
+		   ClientI me = null;
+		   String e1 = "";
 	       String e2 = "";
 	       String e3 = "";
 	       String e4 = "";
@@ -233,7 +241,42 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
 		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path);
+		try {
+			boolean retry = false;
+			do {
+				try {
+					me = (ClientI) UnicastRemoteObject.exportObject(this,portNumber);
+					retry = false;
+				}
+				catch (ExportException e) {
+					if (hostName.equals("localhost")) {
+						System.out.print("Port "+portNumber+" is unavailable, trying ");
+						portNumber++;
+						System.out.println(portNumber);
+						retry = true;
+					}
+					else {
+						System.out.print("Port "+portNumber+" is unavailable.");
+						e.printStackTrace();
+						System.exit(1);
+					}
+				}
+			} while (retry);
+
+		} catch (RemoteException e) {
+			System.err.println("[CLIENT] Could not export self.");
+			e.printStackTrace();
+			System.exit(1);
+		}
+		try {
+			_server.addIClient(me);
+		} catch (RemoteException e) {
+			System.err.println("[CLIENT] Could not register with remote server.");
+			e.printStackTrace();
+			System.exit(1);
+		}
 	}
+
 	
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -307,6 +350,7 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		System.out.println("The game is over, " + winner + " is the winner!");
 	}
+	
 
 	@Override
 	public void run() {

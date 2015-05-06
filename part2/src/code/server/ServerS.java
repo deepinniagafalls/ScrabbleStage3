@@ -19,7 +19,7 @@ public class ServerS implements ServerI, Runnable {
 	private static Game_047 _currentGame;
 	private ArrayList<String> _names = new ArrayList<>();
 	
-	public ServerS(){
+	public ServerS(){ 
 		System.out.println("...server running...");
 		
 	}

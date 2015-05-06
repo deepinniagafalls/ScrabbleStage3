@@ -79,4 +79,7 @@ public class Scrabble_024_047 {
 	public void setIsVeryFirstTurn(boolean b){
 		_isVeryFirstTurn = b;
 	}
+	public Game_047 getGame(){
+		return _g;
+	}
 }

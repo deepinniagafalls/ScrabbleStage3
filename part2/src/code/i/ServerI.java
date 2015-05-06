@@ -10,6 +10,7 @@ public interface ServerI extends Remote {
 	public void addClientI(ClientI c) throws RemoteException;
 	public void start(String data) throws RemoteException;
 	public void sendName(String name) throws RemoteException;
+	public void passTurn(String data) throws RemoteException;
 
 
 }

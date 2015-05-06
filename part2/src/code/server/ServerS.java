@@ -47,6 +47,12 @@ public class ServerS implements ServerI, Runnable {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void passTurn(String data) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
 		
 	}
 

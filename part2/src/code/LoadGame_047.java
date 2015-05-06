@@ -65,7 +65,7 @@ public class LoadGame_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Game_047 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -74,7 +74,6 @@ public class LoadGame_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the String reading files
 	 */
-	
 	private String _fileToRead;
 	
 	private String[] _tokens;
@@ -90,9 +89,10 @@ public class LoadGame_047 {
 	 * @param Reference to the BoardFrame class
 	 * @throws IOException
 	 */
-	public LoadGame_047() throws IOException{
-
-	_scrabble = new Game_047("GUI",false,null,null,null);
+	public LoadGame_047(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf) throws IOException{
+	_b = b;
+	_bf = bf;
+	_scrabble = scrabble;
 	
 	JFrame jf = new JFrame();
 	FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.LOAD);
@@ -139,18 +139,18 @@ public void updateBoard(){
 	for(int row = 0; row < 20; row ++){
 		for(int col = 0; col < 20; col ++){
 			if(Tile_024s[(row*20)+col] == "-"){
-				board.setTile_024(null,row,col);
+				_b.setTile_024(null,row,col);
 			}
 			else{
 				char i = Tile_024s[(row*20)+col].charAt(1);
 				if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
-					board.setTile_024(new Tile_024(i,1),row,col);
+					_b.setTile_024(new Tile_024(i,1),row,col);
 				}
 				else if(i == 'Y'){
-					board.setTile_024(new Tile_024(i,2),row,col);
+					_b.setTile_024(new Tile_024(i,2),row,col);
 				}
 				else{
-					board.setTile_024(new Tile_024(i,5),row,col);}}}}}
+					_b.addTile_024(new Tile_024(i,5),row,col);}}}}}
 
 
 

@@ -173,12 +173,7 @@ public class PlayerFrame_047 {
 	 * @param reference to the names of the players
 	 */
 	public PlayerFrame_047(Scrabble_024_047 s, TileRack_024 tr, int index, Game_047 currentGame, ArrayList<String> name){
-	       try {
-	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
-	        } catch(Exception e) {
-	            e.printStackTrace();
-	        }
-	        
+
         _tr = tr;
 		_s = s;
 		_pf = this;

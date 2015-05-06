@@ -172,11 +172,7 @@ public class Extravaganza_047 extends JFrame {
 	 * Class constructor
 	 */
 	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
-	      try {
-	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
-	        } catch(Exception e) {
-	            e.printStackTrace();
-	        }
+
 	       
 	    JFrame frame = new JFrame();   
 		JPanel p = new JPanel();

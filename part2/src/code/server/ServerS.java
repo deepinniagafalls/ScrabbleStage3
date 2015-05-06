@@ -37,11 +37,17 @@ public class ServerS implements ServerI, Runnable {
 	}
 
 	@Override
-	public void start(ArrayList<String> names) throws RemoteException {
-		_names = names;
+	public void start(String data) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sendName(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
 		
 	}
 
 
-
-}

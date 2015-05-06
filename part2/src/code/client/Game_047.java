@@ -2,6 +2,7 @@ package code.client;
 
 import java.io.Console;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ import code.base.Inventory_024;
 import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;
+import code.i.ClientI;
 import code.util.ReaderTool_047;
 
 import java.util.Scanner.*;
@@ -26,7 +28,7 @@ import java.util.Scanner.*;
  * @date 2015-APRIL-10
  * Game class is responsible for instantiating all of the elements for the graphic user interface (GUI).
  */
-public class Game_047 {
+public class Game_047 implements Runnable, ClientI {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -304,5 +306,16 @@ public class Game_047 {
 			}
 		}
 		System.out.println("The game is over, " + winner + " is the winner!");
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(String s) throws RemoteException {
+		// goto load class to interprete the string and add the data into the data structure
 	}
 }

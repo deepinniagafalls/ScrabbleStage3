@@ -1,5 +1,7 @@
 package code.base;
 
+import java.awt.Color;
+
 public class Tile_024 {
 
 	/**
@@ -11,6 +13,7 @@ public class Tile_024 {
 	 */
 	private int _pointValue;
 	
+	private Color _color;
 	
 	/**
 	 * Class constructor.
@@ -41,4 +44,7 @@ public class Tile_024 {
 	public int getValue(){
 		return _pointValue;
 	}
+	
+	public Color getColor(){return _color;}
+	public void setColor(Color c){_color = c;}
 }

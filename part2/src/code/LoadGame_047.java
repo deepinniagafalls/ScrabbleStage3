@@ -74,6 +74,7 @@ public class LoadGame_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the String reading files
 	 */
+	
 	private String _fileToRead;
 	
 	private String[] _tokens;

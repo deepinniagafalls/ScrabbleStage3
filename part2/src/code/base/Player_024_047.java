@@ -3,7 +3,15 @@ package code.base;
 import java.awt.Color;
 import java.util.Random;
 
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MAY-7
+ * This class is responsible for gathering the data that a player is supposed to have
+ */
 public class Player_024_047 {
 
 	/**
@@ -13,8 +21,7 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that golds reference to the Score
 	 */
 	private int _score;
 	
@@ -25,8 +32,7 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that holds reference to a TileRack
 	 */
 	private TileRack_024 _rack;
 	/**
@@ -36,8 +42,7 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that holds reference to a Color
 	 */
 	private Color _myColor;
 	/**
@@ -47,8 +52,7 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that holds reference to a Players name
 	 */
 	private String _myName;
 	/**
@@ -58,8 +62,9 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param inv: Holds reference to the Inventory class
+	 * @param name: Holds reference to a players name
+	 * Constructor for the PLayer class
 	 */
 	public Player_024_047(Inventory_024 inv, String name){
 		_score = 0;
@@ -79,8 +84,8 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Method that gets a Players score
+	 * @return Returns the score for a player
 	 */
 	public int getScore(){
 		return _score;
@@ -92,8 +97,8 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Method that gets a players TileRack
+	 * @return Returns a players TileRack
 	 */
 	public TileRack_024 getTileRack(){
 		return _rack;
@@ -106,8 +111,8 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Method that gets a Color
+	 * @return Returns a players color
 	 */
 	public Color getColor(){
 		return _myColor;
@@ -119,8 +124,8 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Method that adds the score that a players gets
+	 * @return Returns a players Score
 	 */
 	public int addScore(int score, int i){
 		_score = score;
@@ -134,8 +139,8 @@ public class Player_024_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Method that gets a players name
+	 * @return Returns a players name
 	 */
 	public String getName(){
 		return _myName;

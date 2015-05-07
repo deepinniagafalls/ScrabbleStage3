@@ -169,6 +169,7 @@ public class Board_024 {
 	 * @param x: Reference to an int
 	 * @param y: Reference to another int
 	 * Method that is responsible for being able to remove a tile from  a specific spot and setting that spot to null then a temp
+	 * @return Returns a temp value
 	 */
 	public Tile_024 removeTile(int x, int y){
 		Tile_024 temp = _board[x][y];
@@ -186,6 +187,7 @@ public class Board_024 {
 	 * @param x: Reference to an int
 	 * @param y: Reference to an int
 	 * Method that returns the spot on the Board
+	 * @return Returns a tile at a specific spot on the Board
 	 */
 	public Tile_024 getTile(int x, int y){
 		return _board[x][y];
@@ -211,6 +213,7 @@ public class Board_024 {
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
 	 * Method that return the value of the variable
+	 * @return Returns a temp tile
 	 */
 	public Tile_024 getTempTile(){
 		return _tempTile;
@@ -224,6 +227,7 @@ public class Board_024 {
 	 * @date 2015-MAY-7
 	 * @param index: int variable that holds an index
 	 * Method that returns the multipliers at a certain index
+	 * @return Returns a letter multiplier at a certain spot on the board
 	 */
 	public int getLetterMultiplier(int index){
 		return _letterMultipliers[index];
@@ -237,6 +241,7 @@ public class Board_024 {
 	 * @date 2015-MAY-7
 	 * @param index: int variable that holds an index
 	 * Method that returns the multipliers at a certain index
+	 * @return Returns a word multiplier at a certain spot on the board
 	 */
 	public int getWordMultiplier(int index){
 		return _wordMultipliers[index];

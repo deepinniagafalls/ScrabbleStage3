@@ -362,6 +362,7 @@ public class WordChecker_047 {
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MARCH-7
 	 * Method that gets a specific int in a row
+	 * @return Returns a row coordinate
 	 */
 	public ArrayList<Integer> getRowCoordinates(){
 		return _rowCoordinates;
@@ -374,6 +375,7 @@ public class WordChecker_047 {
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MARCH-7
 	 * Method that gets a specific int in a column
+	 * @return Returns a colun coordinate
 	 */
 	public ArrayList<Integer> getColCoordinates(){
 		return _colCoordinates;

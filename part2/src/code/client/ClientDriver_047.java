@@ -28,10 +28,10 @@ public class ClientDriver_047 {
 	public static void main(String[] args) throws IOException, SQLException {
 		if (args.length != 2) {
 			System.err.println("usage: ClientDriver <hostname> <portnumber>");
-			new Game_047("CUI", false, null, null, null);		
-			//System.exit(1);
+			System.exit(1);
 		}
 		String hostName = args[0];
+		if(args[0] == "test"){	new Game_047("CUI", false, null, null, null);}
 		int portNumber = 50047;
 		// Convert "50NNN" (a String) to 50NNN (an int)
 		try {

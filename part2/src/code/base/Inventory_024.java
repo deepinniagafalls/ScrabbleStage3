@@ -2,16 +2,36 @@ package code.base;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MAY-7
+ * This class is responsible for holding the data for the inventory
+ */
 public class Inventory_024 {
 	
 	/**
-	 * Stores the tiles that have yet to be drawn.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Instance variable that holds a reference to an ArrayList of Tile
 	 */
 	private ArrayList<Tile_024> _tileBag;
 	
 	/**
-	 * Class constructor.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Constructor for the Inventory class
 	 */
 	public Inventory_024(){
 		_tileBag = new ArrayList<Tile_024>();
@@ -19,7 +39,13 @@ public class Inventory_024 {
 	}
 	
 	/**
-	 * Fills the inventory of tiles with the correct number of tiles on creation.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Method that fills the bag
 	 */
 	private void fillBag() {
 		for (int i = 'A'; i <= 'Z'; i = i + 1){
@@ -45,9 +71,14 @@ public class Inventory_024 {
 	}
 
 	/**
-	 * Pulls a single random tile from the inventory.
-	 * 
-	 * @return the random tile that was removed
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Mehod that removes a random tile from the bag
+	 * @return Returns the removal of a random index
 	 */
 	public Tile_024 removeRandomTile(){
 		int randomIndex = new Random().nextInt(_tileBag.size()-1);
@@ -55,19 +86,28 @@ public class Inventory_024 {
 	}
 	
 	/**
-	 * Returns number of tiles in the tile bag.
-	 * 
-	 * @return the size of the array list containing the tiles
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Method that gets the size of the bag
+	 * @return Returns the size of the bag
 	 */
 	public int getSize(){
 		return _tileBag.size();
 	}
 	
 	/**
-	 * Returns the tile at a specific index.
-	 * 
-	 * @param i index of the tile bag array list
-	 * @return tile at index i
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Method that gets a tile
+	 * @return returns a tile from the Inventory
 	 */
 	public Tile_024 getTile(int i){
 		return _tileBag.get(i);

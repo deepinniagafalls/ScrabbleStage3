@@ -11,8 +11,7 @@ import java.util.Random;
  * @author mjszymko (Michael Szymkowski)
  * @author shokoors (Shokoor Syed)
  * @date 2015-MAY-7
- * @param p: Holds reference to the ArrayList of players
- * Method that is responsible for showing who wins the game and when the game ends
+ * This class is responsible for holding data on the Board
  */
 
 public class Board_024 {
@@ -24,8 +23,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that holds a 2D Array for Tile
 	 */
 	private Tile_024[][] _board;
 	/**
@@ -35,8 +33,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that holds reference to the Tile class
 	 */
 	private Tile_024 _tempTile;
 	
@@ -47,8 +44,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable to an array of multipliers
 	 */
 	private int[] _letterMultipliers = new int[400];
 	
@@ -59,8 +55,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable that holds reference to an array of word multipliers
 	 */
 	private int[] _wordMultipliers = new int[400];
 	/**
@@ -70,8 +65,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable for an ArrayList of Integers for index repeating
 	 */
 	private ArrayList<Integer> _letterIndexRepeats = new ArrayList<Integer>();
 	/**
@@ -81,8 +75,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Instance variable to an ArrayList of Integers for word repeating
 	 */
 	private ArrayList<Integer> _wordIndexRepeats = new ArrayList<Integer>();
 	
@@ -93,8 +86,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Constructor for the Board class
 	 */
 	public Board_024(){
 		Random rand = new Random();
@@ -158,8 +150,10 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param t: Reference to the Tile class
+	 * @param x: Reference to an int
+	 * @param y: Reference to another int
+	 * Method that is responsible for holding a x and y value to a 2D array
 	 */
 	public void addTile(Tile_024 t, int x, int y){
 		_board[x][y] = t;
@@ -172,8 +166,9 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param x: Reference to an int
+	 * @param y: Reference to another int
+	 * Method that is responsible for being able to remove a tile from  a specific spot and setting that spot to null then a temp
 	 */
 	public Tile_024 removeTile(int x, int y){
 		Tile_024 temp = _board[x][y];
@@ -188,8 +183,9 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param x: Reference to an int
+	 * @param y: Reference to an int
+	 * Method that returns the spot on the Board
 	 */
 	public Tile_024 getTile(int x, int y){
 		return _board[x][y];
@@ -201,8 +197,8 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param t: Reference to the Tile Test
+	 * Method that sets a temporary reference
 	 */
 	public void setTempTile(Tile_024 t){
 		_tempTile = t;
@@ -214,8 +210,7 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * Method that return the value of the variable
 	 */
 	public Tile_024 getTempTile(){
 		return _tempTile;
@@ -227,8 +222,8 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param index: int variable that holds an index
+	 * Method that returns the multipliers at a certain index
 	 */
 	public int getLetterMultiplier(int index){
 		return _letterMultipliers[index];
@@ -240,8 +235,8 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param index: int variable that holds an index
+	 * Method that returns the multipliers at a certain index
 	 */
 	public int getWordMultiplier(int index){
 		return _wordMultipliers[index];
@@ -253,8 +248,8 @@ public class Board_024 {
 		 * @author mjszymko (Michael Szymkowski)
 		 * @author shokoors (Shokoor Syed)
 		 * @date 2015-MAY-7
-		 * @param p: Holds reference to the ArrayList of players
-		 * Method that is responsible for showing who wins the game and when the game ends
+		 * @param index: int variable that holds an index
+		 * Method that returns what is set to the multipliers
 		 */
 	public void setLetterMultiplier(int index){
 		_letterMultipliers[index] = 1;
@@ -266,8 +261,8 @@ public class Board_024 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * @param p: Holds reference to the ArrayList of players
-	 * Method that is responsible for showing who wins the game and when the game ends
+	 * @param index: int variable that holds an index
+	 * Method that returns what is set to the multipliers
 	 */
 	public void setWordMultipliers(int index){
 		_wordMultipliers[index] = 1;

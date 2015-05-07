@@ -26,7 +26,6 @@ import alphonce.i.IServer;
 
 public class ClientDriver_047 {
 	public static void main(String[] args) throws IOException, SQLException {
-		if(args[0] == "test"){	new Game_047("CUI", false, null, null, null);}
 		if (args.length != 2) {
 			System.err.println("usage: ClientDriver <hostname> <portnumber>");
 			System.exit(1);

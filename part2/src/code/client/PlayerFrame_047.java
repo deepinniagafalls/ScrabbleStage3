@@ -9,11 +9,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.UIManager;
 
-
-
-
-
-
 import code.PlayerSpace_047;
 import code.base.Board_024;
 import code.base.Inventory_024;
@@ -28,7 +23,7 @@ import code.base.TileRack_024;
  * @author mjszymko (Michael Szymkowski)
  * @author shokoors (Shokoor Syed)
  * @date 2015-MAY-7
- * The PlayerFrame class is the graphical representation of the TileRack class. It contains 12 PlayerSpaces.
+ * The Player_frame class is the graphical representation of the TileRack class. It contains 12 PlayerSpaces.
  */
 public class PlayerFrame_047 {
 	/**
@@ -118,7 +113,7 @@ public class PlayerFrame_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * Instance variable that holds reference to the PlayerFrame class
+	 * Instance variable that holds reference to the Player_frame class
 	 */
 	private PlayerFrame_047 _pf;
 	/**
@@ -161,6 +156,8 @@ public class PlayerFrame_047 {
 	 * Instance variable that holds reference to the current state of the game
 	 */
 	private Game_047 _currentGame;
+	
+	private JFrame _frame;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -181,7 +178,7 @@ public class PlayerFrame_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
-	 * Constructor for the PlayerFrame class that holds parts of the GUI
+	 * Constructor for the Player_frame class that holds parts of the GUI
 	 * @param Reference to the Scrabble class
 	 * @param Reference to the TileRack class
 	 * @param Reference to the int index
@@ -197,25 +194,25 @@ public class PlayerFrame_047 {
 		_myTurnNumber = index;
 		_currentGame = currentGame;
 		_players = _s.getPlayers(); //Just added
-		JFrame frame = new JFrame("Tile Rack");
-		frame.add(_points);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(1500, 103);
+		_frame = new JFrame("Tile Rack");
+		_frame.add(_points);
+		_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		_frame.setSize(1500, 103);
 		GridLayout grid = new GridLayout(1, 0, 0, 0);
-		frame.setLayout(grid);
+		_frame.setLayout(grid);
 		int row = 0;
 		
 		for(int i=0; i<12; i++){
 			PlayerSpace_047 temp = new PlayerSpace_047(_s,i,_pf,_currentGame); 
 			_boardOfButtons[row][i] = temp;
 			_boardOfPlayerSpaces[row][i] = temp;
-			frame.add(temp);
+			_frame.add(temp);
 		}
-		if(index == 0){frame.setTitle(name.get(0) + "'s Tile Rack");}
-		if(index == 1){frame.setTitle(name.get(1) + "'s Tile Rack");}
-		if(index == 2){frame.setTitle(name.get(2) + "'s Tile Rack");}
-		if(index == 3){frame.setTitle(name.get(3) + "'s Tile Rack");}
-		frame.setVisible(true);
+		if(index == 0){_frame.setTitle(name.get(0) + "'s Tile Rack");}
+		if(index == 1){_frame.setTitle(name.get(1) + "'s Tile Rack");}
+		if(index == 2){_frame.setTitle(name.get(2) + "'s Tile Rack");}
+		if(index == 3){_frame.setTitle(name.get(3) + "'s Tile Rack");}
+		_frame.setVisible(true);
 		
 	}
 	/**
@@ -334,4 +331,7 @@ public class PlayerFrame_047 {
 		return _previousPlayerSpace;
 	}
 	
+	public void setTitle(String name){
+		_frame.setTitle(name + "'s Tile Rack");
+	}
 }

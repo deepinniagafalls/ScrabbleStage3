@@ -204,10 +204,10 @@ public void updateBoard(){
 				String [] numbers = colorInputs.split(",");
 				int red = Integer.parseInt(numbers[0]);
 				int blue = Integer.parseInt(numbers[1]);
+				System.out.println(blue);
 				int green = Integer.parseInt(numbers[2]);
 						
 				Color savedColor = new Color(red,blue,green);
-				
 				
 				if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
 					_b.addTile(new Tile_024(i,1),row,col);
@@ -238,7 +238,8 @@ public void updatePlayers(){
 	for(int i = 0; i < numOfPlayers; i++){
 		String[] info = playerList[i].split(",");
 		_scrabble.returnPlayer(i).setName(info[0]);
-		
+		_bf.getPlayerFrame(i).setTitle(info[0]);
+		/*
 		String colorInputs = info[1].replace("java.awt.Color[", "");
 		colorInputs = colorInputs.replace("r=", "");
 		colorInputs = colorInputs.replace("b=", "");
@@ -253,7 +254,7 @@ public void updatePlayers(){
 		Color savedColor = new Color(red,blue,green);
 		
 		_scrabble.returnPlayer(i).setColor(savedColor);
-		
+		*/
 	}
 }
 

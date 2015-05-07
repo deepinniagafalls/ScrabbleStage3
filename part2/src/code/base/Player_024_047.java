@@ -7,25 +7,59 @@ import java.util.Random;
 public class Player_024_047 {
 
 	/**
-	 * Records the score.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	private int _score;
 	
 	/**
-	 * Allows the Player to access the Tiles on its own TileRack.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	private TileRack_024 _rack;
-	//private Inventory _inv;
-	
-	private Color _myColor;
-	
-	private String _myName;
-	
-	
 	/**
-	 * Class constructor.
-	 * 
-	 * @param inv can draw Tiles from the Inventory
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
+	private Color _myColor;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
+	private String _myName;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public Player_024_047(Inventory_024 inv, String name){
 		_score = 0;
@@ -39,35 +73,70 @@ public class Player_024_047 {
 		_myName = name;
 	}
 	/**
-	 * Gets the int value of the Player's score.
-	 * 
-	 * @return Player's score.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public int getScore(){
 		return _score;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public TileRack_024 getTileRack(){
 		return _rack;
 	}
 
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public Color getColor(){
 		return _myColor;
 	}
 	/**
-	 * Adds the new points to the original score
-	 * 
-	 * @param score Score to be added to
-	 * @param i additional points added to the score
-	 * @return Player's score.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public int addScore(int score, int i){
 		_score = score;
 		_score = _score + i;
 		return _score;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public String getName(){
 		return _myName;
 	}

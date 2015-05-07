@@ -146,4 +146,8 @@ public class Player_024_047 {
 		return _myName;
 	}
 	
+	public void setName(String name){
+		_myName = name;
+	}
+	
 }

@@ -184,7 +184,7 @@ public void updateBoard(){
 	//Board board;
 	
 	for(int i = 0; i < Tile_024s.length; i++){
-		System.out.println(Tile_024s[i]);
+		//System.out.println(Tile_024s[i]);
 	}
 	
 	for(int row = 0; row < 20; row ++){
@@ -195,18 +195,34 @@ public void updateBoard(){
 			else{
 				//System.out.println(Tile_024s[(row*20)+col].charAt(1));
 				char i = Tile_024s[(row*20)+col].charAt(1);
+				String colorInputs = Tile_024s[(row*20)+col].substring(19,36);
+				
+				colorInputs = colorInputs.replace("r=", "");
+				colorInputs = colorInputs.replace("b=", "");
+				colorInputs = colorInputs.replace("g=", "");
+				
+				String [] numbers = colorInputs.split(",");
+				int red = Integer.parseInt(numbers[0]);
+				int blue = Integer.parseInt(numbers[1]);
+				int green = Integer.parseInt(numbers[2]);
+						
+				Color savedColor = new Color(red,blue,green);
+				
 				
 				if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
 					_b.addTile(new Tile_024(i,1),row,col);
 					_bf.getTileSpace(row, col).setText(Character.toString(i));
+					_bf.getTileSpace(row, col).setBackground(savedColor);
 				}
 				else if(i == 'Y'){
 					_b.addTile(new Tile_024(i,2),row,col);
 					_bf.getTileSpace(row, col).setText(Character.toString(i));
+					_bf.getTileSpace(row, col).setBackground(savedColor);
 				}
 				else{
 					_b.addTile(new Tile_024(i,5),row,col);
-					_bf.getTileSpace(row, col).setText(Character.toString(i));}}}}}
+					_bf.getTileSpace(row, col).setText(Character.toString(i));
+					_bf.getTileSpace(row, col).setBackground(savedColor);}}}}}
 
 
 
@@ -214,12 +230,15 @@ public void updateBoard(){
 public void updatePlayers(){
 	String playerRep = _tokens[2];
 	String [] playerList = playerRep.split(";");
+	for(int i = 0; i < playerList.length; i++){
+		System.out.println(playerList[i]);
+	}
 	int numOfPlayers = playerList.length;
 	//_scrabble = new ServerCode(numOfPlayers);
 	for(int i = 0; i < numOfPlayers; i++){
 		String[] info = playerList[i].split(",");
-		//_scrabble.returnPlayer(i).setName(info[0]);
-		/*
+		_scrabble.returnPlayer(i).setName(info[0]);
+		
 		String colorInputs = info[1].replace("java.awt.Color[", "");
 		colorInputs = colorInputs.replace("r=", "");
 		colorInputs = colorInputs.replace("b=", "");
@@ -234,7 +253,7 @@ public void updatePlayers(){
 		Color savedColor = new Color(red,blue,green);
 		
 		_scrabble.returnPlayer(i).setColor(savedColor);
-		*/
+		
 	}
 }
 

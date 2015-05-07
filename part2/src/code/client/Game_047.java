@@ -30,7 +30,8 @@ import java.util.Scanner.*;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MAY-7
  * Game class is responsible for instantiating all of the elements for the graphic user interface (GUI).
  */
 public class Game_047 implements Runnable, ClientI {
@@ -39,7 +40,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the Tile class
 	 */
 	Tile_024 _t;
@@ -48,7 +50,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the number of players
 	 */
 	private static int _numberOfPlayers;
@@ -57,7 +60,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private static ArrayList<Player_024_047> _playerList;
@@ -66,7 +70,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the players in the game
 	 */
 	private static ArrayList<PlayerFrame_047> _playerFrameList;
@@ -75,7 +80,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the PlayerFrame class
 	 */
 	private static int _currentTurn = 0;
@@ -84,7 +90,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the current turn
 	 */
 	private static Game_047 _currentGame;
@@ -95,15 +102,38 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Constructor for the Game class
 	 * @param String for the player names
 	 * @throws IOEception
 	 */
 	
 	private ArrayList<String> _names = new ArrayList<>();
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Instance variable that holds reference to the server
+	 */
 	private ServerI _server;
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param s: holds a string
+	 * @param mode: holds RMI stuff
+	 * @param hostName: Holds the hostname we use
+	 * @param portNumber: Holds the portnumber we use
+	 * @param sv: holds RMI stuff
+	 * Constructor for the Game class
+	 */
 	public Game_047(String s, boolean mode, String hostName, String portNumber, ServerI sv) throws IOException{
 		   _server = sv;
 		   ClientI me = null;
@@ -285,7 +315,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that controls the turns for the game
 	 * @return returns the current turn in the game
 	 */
@@ -305,7 +336,8 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that obtains the contents of the Game class
 	 * @return Returns the current game
 	 */
@@ -317,30 +349,77 @@ public class Game_047 implements Runnable, ClientI {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that obtains the current turn
 	 * @return Returns the current turn
 	 */
 	public int getCurrentTurn(){
 		return  _currentTurn;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Method that gets the number of players in the game
+	 * @return Returns the number of players
+	 */
 	public int getNumOfPlayers(){
 		return _numberOfPlayers;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param index: int value for a specific index	
+	 * Method that gets a players name
+	 * @return Returns a players name
+	 */
 	public String getName(int index){
 		return _names.get(index);
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param index: int value for a specific index
+	 * Method that gets a specific player
+	 * @return Returns a specific player
+	 */
 	public Player_024_047 getPlayer(int index){
 		return _playerList.get(index);
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Method that gets the list of players
+	 * @return Returns that list
+	 */
 	public ArrayList<Player_024_047> getPlayerList(){
 		return _playerList;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * Method that prints out the winner of the game
+	 */
 	public void printOutWinner(){
 		String winner = _playerList.get(0).getName();
 		int highest = _playerList.get(0).getScore();

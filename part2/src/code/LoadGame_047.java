@@ -194,17 +194,19 @@ public void updateBoard(){
 			}
 			else{
 				//System.out.println(Tile_024s[(row*20)+col].charAt(1));
+				System.out.print(row + "   " + col);
 				char i = Tile_024s[(row*20)+col].charAt(1);
 				String colorInputs = Tile_024s[(row*20)+col].substring(19,36);
 				
 				colorInputs = colorInputs.replace("r=", "");
 				colorInputs = colorInputs.replace("b=", "");
 				colorInputs = colorInputs.replace("g=", "");
+				colorInputs = colorInputs.replace("]", "");
 				
 				String [] numbers = colorInputs.split(",");
 				int red = Integer.parseInt(numbers[0]);
 				int blue = Integer.parseInt(numbers[1]);
-				System.out.println(blue);
+				System.out.println(numbers[2]);
 				int green = Integer.parseInt(numbers[2]);
 						
 				Color savedColor = new Color(red,blue,green);
@@ -237,24 +239,33 @@ public void updatePlayers(){
 	//_scrabble = new ServerCode(numOfPlayers);
 	for(int i = 0; i < numOfPlayers; i++){
 		String[] info = playerList[i].split(",");
+		for(int x = 0; x < info.length; x++){
+			//System.out.println(info[x]);
+		}
 		_scrabble.returnPlayer(i).setName(info[0]);
 		_bf.getPlayerFrame(i).setTitle(info[0]);
-		/*
-		String colorInputs = info[1].replace("java.awt.Color[", "");
+		
+		
+		
+		String colorInputs = info[1] + "," + info[2] + "," + info[3]; 
+		colorInputs = colorInputs.replace("java.awt.Color[", "");
 		colorInputs = colorInputs.replace("r=", "");
 		colorInputs = colorInputs.replace("b=", "");
 		colorInputs = colorInputs.replace("g=", "");
 		colorInputs = colorInputs.replace("]", "");
-		
+		System.out.println(colorInputs);
 		String [] numbers = colorInputs.split(",");
 		int red = Integer.parseInt(numbers[0]);
+		//System.out.println(numbers[1]);
 		int blue = Integer.parseInt(numbers[1]);
 		int green = Integer.parseInt(numbers[2]);
 				
 		Color savedColor = new Color(red,blue,green);
 		
-		_scrabble.returnPlayer(i).setColor(savedColor);
-		*/
+		//_scrabble.returnPlayer(i).setColor(savedColor);
+		for(int k = 0; k<12; k++){
+			_bf.getPlayerFrame(i).getPlayerSpace(k).setBackground(savedColor);
+		}
 	}
 }
 

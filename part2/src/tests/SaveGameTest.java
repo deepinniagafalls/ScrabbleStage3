@@ -13,13 +13,13 @@ public class SaveGameTest {
 	
 	Scrabble_024_047 _scrabble;
 	
-	@Test
-	public void saveStringTest() {
-		BufferedWriter bw = new BufferedWriter(bw);
-		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
-			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
-		}
-		assertTrue("The string that is saved is" +);
-	}
+	//@Test
+	//public void saveStringTest() {
+	//	BufferedWriter bw = new BufferedWriter(bw);
+	//	for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
+			//bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
+		//}
+	//	assertTrue("The string that is saved is" +);
+	//}
 
 }

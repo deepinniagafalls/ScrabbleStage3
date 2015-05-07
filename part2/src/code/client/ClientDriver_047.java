@@ -42,10 +42,6 @@ public class ClientDriver_047 {
 			System.exit(1);
 		}
 
-		ClientGUI gui = new ClientGUI(names); 
-		Game_047 g = new Game_047("GUI", false, null, null, null);
-
-
 		// If there is no security manager running, create one.
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());

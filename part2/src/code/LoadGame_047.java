@@ -76,7 +76,7 @@ public class LoadGame_047 {
 	 */
 	private String _fileToRead;
 	
-	private String[] _tokens;
+	private String[] _tokens = new String[4];
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)

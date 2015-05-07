@@ -134,7 +134,7 @@ public class Game_047 implements Runnable, ClientI {
 	 * @param sv: holds RMI stuff
 	 * Constructor for the Game class
 	 */
-	public Game_047(String s, boolean mode, String hostName, String portNumber, ServerI sv) throws IOException{
+	public Game_047(String s, boolean mode, String Name, String hostName, int portNumber, ServerI sv) throws IOException{
 		   _server = sv;
 		   ClientI me = null;
 		   String e1 = "";

@@ -242,9 +242,11 @@ public void updatePlayers(){
 		for(int x = 0; x < info.length; x++){
 			//System.out.println(info[x]);
 		}
-		_scrabble.returnPlayer(i).setName(info[0]);
-		_bf.getPlayerFrame(i).setTitle(info[0]);
-		
+		System.out.println(info[0]);
+		String newName = info[0].replace("[","");
+		//System.out.println(info[0]);
+		_scrabble.returnPlayer(i).setName(newName);
+		_bf.getPlayerFrame(i).setTitle(newName);
 		
 		
 		String colorInputs = info[1] + "," + info[2] + "," + info[3]; 
@@ -261,10 +263,18 @@ public void updatePlayers(){
 		int green = Integer.parseInt(numbers[2]);
 				
 		Color savedColor = new Color(red,blue,green);
+				
+		String [] tiles = new String[12];
+		System.out.println(info[5]);
+		
+		String tilesToGrab = info[5].replace("[","");
+		tilesToGrab = tilesToGrab.replace("]","");
+		_bf.getPlayerFrame(i).setPoints(info[4]);
 		
 		//_scrabble.returnPlayer(i).setColor(savedColor);
 		for(int k = 0; k<12; k++){
 			_bf.getPlayerFrame(i).getPlayerSpace(k).setBackground(savedColor);
+			_bf.getPlayerFrame(i).getPlayerSpace(k).setText(Character.toString(tilesToGrab.charAt(k)));
 		}
 	}
 }

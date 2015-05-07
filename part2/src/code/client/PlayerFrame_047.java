@@ -334,4 +334,8 @@ public class PlayerFrame_047 {
 	public void setTitle(String name){
 		_frame.setTitle(name + "'s Tile Rack");
 	}
+	
+	public void setPoints(String points){
+		_points.setText(points);
+	}
 }

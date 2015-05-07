@@ -26,7 +26,8 @@ import code.base.TileRack_024;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MAY-7
  * The PlayerFrame class is the graphical representation of the TileRack class. It contains 12 PlayerSpaces.
  */
 public class PlayerFrame_047 {
@@ -35,7 +36,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private Scrabble_024_047 _s;
@@ -44,7 +46,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the Inventory class
 	 */
     private Inventory_024 _inv;
@@ -53,7 +56,8 @@ public class PlayerFrame_047 {
      * @author ceelman (Chris Elman)
      * @author jaeheunk (Jason(Jaeheun) Kim)
      * @author mjszymko (Michael Szymkowski)
-     * @date 2015-APRIL-10
+     * @author shokoors (Shokoor Syed)
+     * @date 2015-MAY-7
      * Instance variable that holds reference to the ArrayList of type players
      */
     private ArrayList<Player_024_047> _players;
@@ -62,7 +66,8 @@ public class PlayerFrame_047 {
      * @author ceelman (Chris Elman)
      * @author jaeheunk (Jason(Jaeheun) Kim)
      * @author mjszymko (Michael Szymkowski)
-     * @date 2015-APRIL-10
+     * @author shokoors (Shokoor Syed)
+     * @date 2015-MAY-7
      * Instance variable that holds reference to the Board class
      */
 	private Board_024 _board;
@@ -71,7 +76,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the number of players in the game
 	 */
 	private int _numberOfPlayers;
@@ -80,7 +86,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the board of buttons
 	 */
 	private JButton[][] _boardOfButtons = new JButton[1][12];
@@ -89,7 +96,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the board of player spaces
 	 */
 	private PlayerSpace_047[][] _boardOfPlayerSpaces = new PlayerSpace_047[1][12];
@@ -98,7 +106,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the TileRack class
 	 */
 	private TileRack_024 _tr;
@@ -107,7 +116,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the PlayerFrame class
 	 */
 	private PlayerFrame_047 _pf;
@@ -116,7 +126,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the Tile class
 	 */
 	private Tile_024 _tileTemp;
@@ -125,7 +136,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the PlayerScape class
 	 */
 	private PlayerSpace_047 _current;
@@ -134,7 +146,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the turn of the player
 	 */
 	private int _myTurnNumber;
@@ -143,7 +156,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the current state of the game
 	 */
 	private Game_047 _currentGame;
@@ -152,7 +166,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the points that the players begins with
 	 */
 	private JLabel _points = new JLabel("Points: 0000");
@@ -164,7 +179,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Constructor for the PlayerFrame class that holds parts of the GUI
 	 * @param Reference to the Scrabble class
 	 * @param Reference to the TileRack class
@@ -207,7 +223,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that updates the class
 	 */
 	public void update(){
@@ -222,7 +239,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that removes tiles from a players space
 	 * @return Null
 	 */
@@ -234,7 +252,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that sets a tile to a temporary value
 	 */
 	public void setTempTile(Tile_024 t){
@@ -245,7 +264,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that gets the content of the Board class
 	 * @return The content of the Board class
 	 */
@@ -257,7 +277,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that gets the current space of where the player is playing
 	 * @return Returns that space
 	 */
@@ -269,7 +290,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that sets the current player scape to some value
 	 * @param Holds value to the current space
 	 */
@@ -281,7 +303,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that gets a players space
 	 * @param holds value to a certain int value
 	 * @return Returns the players values for their board
@@ -294,7 +317,8 @@ public class PlayerFrame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Method that gets the players turn number
 	 * @return Returns the players turn number
 	 */

@@ -32,7 +32,8 @@ import code.client.Game_047;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MAY-7
  * The Extravaganza class creates a window that allows for saving, restoring, and passing turn functionality.
  */
 
@@ -44,7 +45,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Stores serial version
 	 */
 	private static final long serialVersionUID = 1L;
@@ -53,7 +55,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * stores dir path
 	 */
 	private JTextField filename = new JTextField(), dir = new JTextField();
@@ -62,6 +65,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Button for players to choose a directory to load
 	 */
 	private JButton open = new JButton("Open"), save = new JButton("Save");
@@ -70,7 +75,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Button for players to pass their turn
 	 */
 	private JButton pass = new JButton("Pass");
@@ -79,7 +85,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Holds a reference to a BoardFrame where tiles will be placed on
 	 */
 	private BoardFrame_047 _bf;
@@ -89,7 +96,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Holds a reference to a Board model for the game
 	 */
 	private Board_024 _b;
@@ -98,7 +106,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Holds a reference to the Scrabble class where many classes are instantiated.
 	 */
 	private Scrabble_024_047 _scrabble;
@@ -107,16 +116,19 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * An int value that indicates turns
 	 /
 	private int _currentTurn;
+	
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * An int value that indicates how many players are playing the game
 	 * /
 	private int _numberOfPlayers;
@@ -125,7 +137,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Hold a referenceto the Game class where we get inputs from players
 	 */
 	private Game_047 _g;
@@ -134,7 +147,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * An int value that is used for counting
 	 */
 	private int _c = 0;
@@ -143,7 +157,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Label that hold String value to show on the GUI screen for players
 	 */
 	private JLabel label1;
@@ -152,7 +167,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Boolean value that tells us whether a player's frame is empty or not.
 	 */
 	private boolean _isPlayerFrameStillEmpty = false;
@@ -162,7 +178,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * @param scrabble gets a reference for a class that instantiate essential classes
 	 * @param bf gets a reference for a class that holds JButtons for players to place tiles
 	 * @param g gets a reference for the Game class
@@ -216,7 +233,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Class that holds codes that make open button work
 	 */
 	public class OpenL implements ActionListener {
@@ -225,7 +243,8 @@ public class Extravaganza_047 extends JFrame {
 		 * @author ceelman (Chris Elman)
 		 * @author jaeheunk (Jason(Jaeheun) Kim)
 		 * @author mjszymko (Michael Szymkowski)
-		 * @date 2015-APRIL-10
+		 * @author shokoors (Shokoor Syed)
+		 * @date 2015-MAY-7
 		 * This method explains what would happen if the open button is clicked
 		 */
 		public void actionPerformed(ActionEvent e) {
@@ -256,7 +275,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * Class that holds codes that make save button work
 	 */
 	private class SaveL implements ActionListener {
@@ -266,7 +286,8 @@ public class Extravaganza_047 extends JFrame {
 		 * @author ceelman (Chris Elman)
 		 * @author jaeheunk (Jason(Jaeheun) Kim)
 		 * @author mjszymko (Michael Szymkowski)
-		 * @date 2015-APRIL-10
+		 * @author shokoors (Shokoor Syed)
+		 * @date 2015-MAY-7
 		 * This method explains what would happen if the save button is clicked
 		 */
 		public void actionPerformed(ActionEvent e) {
@@ -293,7 +314,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * This method sets details about a frame and make it visible
 	 */
 	private static void run(JFrame frame, int width, int height) {
@@ -306,7 +328,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * This class holds codes that make the Pass button work
 	 */
 	private class PassT implements ActionListener {
@@ -324,7 +347,8 @@ public class Extravaganza_047 extends JFrame {
 		 * @author ceelman (Chris Elman)
 		 * @author jaeheunk (Jason(Jaeheun) Kim)
 		 * @author mjszymko (Michael Szymkowski)
-		 * @date 2015-APRIL-10
+		 * @author shokoors (Shokoor Syed)
+		 * @date 2015-MAY-7
 		 * Method that performs a certain action when an action is performed.
 		 */
 		public void actionPerformed(ActionEvent e) {
@@ -473,7 +497,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
 	 * @return Returns an int value for a char that the method is getting
 	 * This method returns a score value of type int according to a letter of type Char
 	 */

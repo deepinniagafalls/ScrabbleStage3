@@ -18,7 +18,8 @@ import code.client.BoardFrame_047;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
  * The TileSpace class is the graphical representation of the Tiles in the Board.
  */
 public class TileSpace_047 extends JButton implements ActionListener {
@@ -27,7 +28,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the TileSpace class
 	 */
 	private TileSpace_047 _j;
@@ -36,7 +38,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to a specific row
 	 */
 	private int _row;
@@ -45,7 +48,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to a specific column
 	 */
 	private int _col;
@@ -54,7 +58,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Board class
 	 */
 	private Board_024 _b;
@@ -63,7 +68,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Tile class
 	 */
 	private Tile_024 _t;
@@ -72,7 +78,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Inventory class
 	 */
 	private Inventory_024 _i;
@@ -81,7 +88,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the ArrayList of Players
 	 */
 	private ArrayList<Player_024_047> _players;
@@ -90,7 +98,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private Scrabble_024_047 _scrabble;
@@ -99,7 +108,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
 	private BoardFrame_047 _bf;
@@ -108,7 +118,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the String of a players text
 	 */
 	private String _myText;
@@ -117,7 +128,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Color class
 	 */
 	private Color _color;
@@ -127,7 +139,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Constructor for the TileSpace class
 	 * @param x: the x-coordinate of the tilespace
 	 * @param y: the y-coordinate of the tilespace
@@ -151,7 +164,9 @@ public class TileSpace_047 extends JButton implements ActionListener {
 			 * @author ceelman (Chris Elman)
 			 * @author jaeheunk (Jason(Jaeheun) Kim)
 			 * @author mjszymko (Michael Szymkowski)
-			 * @date 2015-APRIL-10
+			 * @author shokoors (Shokoor Syed)
+			 * * @date 2015-MARCH-7
+			 * Method that performs an action for moving tiles
 			 */
 			public void actionPerformed(ActionEvent e) {
 				if(_j.isAdjacent() || _scrabble.getIsVeryFirstTurn()){
@@ -193,7 +208,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets a specific row
 	 * @return Returns a specific row
 	 */
@@ -205,7 +221,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets a specific column
 	 * @return Returns a specific column
 	 */
@@ -217,7 +234,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets a specific tile
 	 * @return Returns a specific tile
 	 */
@@ -229,7 +247,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets a players text
 	 * @return Returns that text
 	 */
@@ -242,7 +261,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that performs an action
 	 */
 	@Override
@@ -255,7 +275,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that keeps track of tile placement on the board
 	 * @return Returns true is allowed to place
 	 * @return Returns false if now allowed to place
@@ -328,7 +349,8 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that obtains a specific color
 	 * @return Returns a color
 	 */

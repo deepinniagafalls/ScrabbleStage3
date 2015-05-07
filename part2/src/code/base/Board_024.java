@@ -1,33 +1,100 @@
 package code.base;
 
 import java.util.ArrayList;
+
 import java.util.Random;
 
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MAY-7
+ * @param p: Holds reference to the ArrayList of players
+ * Method that is responsible for showing who wins the game and when the game ends
+ */
 
 public class Board_024 {
 
 	/**
-	 * 2-D array of tiles to store tiles.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	private Tile_024[][] _board;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	private Tile_024 _tempTile;
 	
 	/**
-	 * Stores all 400 individual letter multipliers on the board
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	private int[] _letterMultipliers = new int[400];
 	
 	/**
-	 * Stores all 400 whole word multipliers on the board
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	private int[] _wordMultipliers = new int[400];
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	private ArrayList<Integer> _letterIndexRepeats = new ArrayList<Integer>();
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	private ArrayList<Integer> _wordIndexRepeats = new ArrayList<Integer>();
 	
 	/**
-	 * Class constructor.
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public Board_024(){
 		Random rand = new Random();
@@ -85,22 +152,28 @@ public class Board_024 {
 	}
 
 	/**
-	 * Adds a tile to a position on the board.
-	 * 
-	 * @param t	the tile to be added
-	 * @param x	the x-coordinate of the placement location
-	 * @param y the y-coordinate of the placement location
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public void addTile(Tile_024 t, int x, int y){
 		_board[x][y] = t;
 	}
 
 	/**
-	 * Removes a tile from a position on the board.
-	 * 
-	 * @param x the x-coordinate of the tile to be removed
-	 * @param y the y-coordinate of the tile to be removed
-	 * @return
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public Tile_024 removeTile(int x, int y){
 		Tile_024 temp = _board[x][y];
@@ -109,36 +182,93 @@ public class Board_024 {
 	}
 
 	/**
-	 * Returns the tile at a position.
-	 * 
-	 * @param x the x-coordinate of the position
-	 * @param y the y-coordinate of the position
-	 * @return
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
 	 */
 	public Tile_024 getTile(int x, int y){
 		return _board[x][y];
 	}
-
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public void setTempTile(Tile_024 t){
 		_tempTile = t;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public Tile_024 getTempTile(){
 		return _tempTile;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public int getLetterMultiplier(int index){
 		return _letterMultipliers[index];
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public int getWordMultiplier(int index){
 		return _wordMultipliers[index];
 	}
-	
+		/**
+		 * @author tylerdie (Tyler Dietrich)
+		 * @author ceelman (Chris Elman)
+		 * @author jaeheunk (Jason(Jaeheun) Kim)
+		 * @author mjszymko (Michael Szymkowski)
+		 * @author shokoors (Shokoor Syed)
+		 * @date 2015-MAY-7
+		 * @param p: Holds reference to the ArrayList of players
+		 * Method that is responsible for showing who wins the game and when the game ends
+		 */
 	public void setLetterMultiplier(int index){
 		_letterMultipliers[index] = 1;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MAY-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
 	public void setWordMultipliers(int index){
 		_wordMultipliers[index] = 1;
 	}

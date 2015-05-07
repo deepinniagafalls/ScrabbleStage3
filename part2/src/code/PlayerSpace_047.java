@@ -17,7 +17,8 @@ import code.client.PlayerFrame_047;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
  * The PlayerSpace class is the graphical representation of the tiles in a Player's Tile Rack.
  */
 public class PlayerSpace_047 extends JButton implements ActionListener {
@@ -26,7 +27,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the ArrayList of Players
 	 */
 	private ArrayList<Player_024_047> _players;
@@ -35,7 +37,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the PlayerSpace class
 	 */
 	private PlayerSpace_047 _playerSpace;
@@ -44,7 +47,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Scrabble
 	 */
 	private Scrabble_024_047 _scrabble;
@@ -53,7 +57,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Tile class
 	 */
 	private Tile_024 _t;
@@ -62,7 +67,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the PlayerFrame class
 	 */
 	private PlayerFrame_047 _pf;
@@ -71,7 +77,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the number of tiles a player has
 	 */
 	private int _numberOfTile;
@@ -80,7 +87,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to a temporary tile
 	 */
 	private Tile_024 _tempTH;
@@ -89,7 +97,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Game class
 	 */
 	private Game_047 _currentGame;
@@ -98,7 +107,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Constructor for the PlayerSpace class
 	 * @param Reference to the Scrabble class
 	 * @param Reference to an int number
@@ -124,7 +134,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 			 * @author ceelman (Chris Elman)
 			 * @author jaeheunk (Jason(Jaeheun) Kim)
 			 * @author mjszymko (Michael Szymkowski)
-			 * @date 2015-APRIL-10
+			 * @author shokoors (Shokoor Syed)
+			 * @date 2015-MARCH-7
 			 * Method that performs the actions for the PlayerSpace class
 			 */
 				public void actionPerformed(ActionEvent e) {
@@ -164,7 +175,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets the number of tiles the player has
 	 * @return Returns the number of tiles
 	 */
@@ -177,7 +189,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets a temporary tile
 	 * @return Returns a temporary tile
 	 */
@@ -190,7 +203,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that sets a current tile
 	 * @param Reference to a specific tile
 	 */
@@ -202,7 +216,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that gets the specific tile
 	 * @return Returns the tile
 	 */
@@ -214,7 +229,8 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that performs an action
 	 */
 	@Override

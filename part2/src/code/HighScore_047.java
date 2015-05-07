@@ -1,4 +1,4 @@
-	package code;
+package code;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -18,7 +18,8 @@ import code.base.Player_024_047;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
  * The HighScore class is responsible for saving the name of Players and their corresponding scores to a text file
  */
 public class HighScore_047 {
@@ -26,6 +27,18 @@ public class HighScore_047 {
 	ArrayList<String> _words;
 	public HighScore_047(){
 	}
+	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * @param p: Holds reference to the ArrayList of players
+	 * Method that is responsible for showing who wins the game and when the game ends
+	 */
+	
 	public void endGame(ArrayList<Player_024_047> p) throws FileNotFoundException, UnsupportedEncodingException{
 		// Load previous high score
 		JOptionPane.showMessageDialog(null, "The game has ended");

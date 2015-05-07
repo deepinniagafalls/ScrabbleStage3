@@ -23,7 +23,8 @@ import code.client.PlayerFrame_047;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(jaeheunk) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
  * The SaveGame class is responsible for saving the current state of the game in a text file.
  */
 @SuppressWarnings("unused")
@@ -33,7 +34,8 @@ public class SaveGame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Board class
 	 */
 	private Board_024 _b;
@@ -42,7 +44,8 @@ public class SaveGame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
 	private BoardFrame_047 _bf;
@@ -51,7 +54,8 @@ public class SaveGame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the TileRack class
 	 */
 	private TileRack_024 _tr;
@@ -60,7 +64,8 @@ public class SaveGame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 ** @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private Scrabble_024_047 _scrabble;
@@ -69,7 +74,8 @@ public class SaveGame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to a specidif file to write to
 	 */
 	private String _fileToWriteTo;
@@ -84,16 +90,14 @@ public class SaveGame_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Constructor for the SaveGame class
 	 * @param Reference to the Board class
 	 * @param Reference to the BoardFrame class
 	 * @param Reference to the Scrabble class
 	 * @throws Throws IOException
 	 */
-	
-	
-
 	
 	public SaveGame_047(Board_024 b, BoardFrame_047 bf, Scrabble_024_047 s) throws IOException{
 		_b = b;
@@ -168,25 +172,14 @@ public class SaveGame_047 {
 			System.out.println("Done");
 			
 		}
-		
-		
-		/**
-		 * @author tylerdie (Tyler Dietrich)
-		 * @author ceelman (Chris Elman)
-		 * @author jaeheunk (Jason(jaeheunk) Kim)
-		 * @author mjszymko (Michael Szymkowski)
-		 * @date 2015-APRIL-10
-		 * Method that writes to a file
-		 */
-
-	
 	
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 ** @date 2015-MARCH-7
 	 * Method that writes to a file
 	 */
 	public void writeNewFile() throws IOException{

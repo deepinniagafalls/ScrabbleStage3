@@ -15,7 +15,8 @@ import code.util.ReaderTool_047;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(jaeheunk) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
  * The WordChecker class is responsible for checking the validity of a word placed on the Board/BoardFrame by the player. Invalid words are incorrectly spelled.
  */
 public class WordChecker_047 {
@@ -24,7 +25,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to a new ReaderTool
 	 */
 	private ReaderTool_047 _r;
@@ -33,7 +35,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the coordinates of a row
 	 */
 	private ArrayList<Integer>	_rowCoordinates;
@@ -42,7 +45,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the coordinates of a column
 	 */
 	private ArrayList<Integer> _colCoordinates;
@@ -51,7 +55,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to an ArrayList of tiles placed
 	 */
 	private ArrayList<Tile_024> _tilesPlaced;
@@ -60,7 +65,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
 	private BoardFrame_047 _bf;
@@ -69,7 +75,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the Board class
 	 */
 	private Board_024 _b;
@@ -78,7 +85,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Instance variable that holds reference to the number of passes in a row
 	 */
 	private int _numberOfPassesInARow = 0;
@@ -87,7 +95,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Constructor for the WordChecker class that checks if a wrd is valid
 	 * @param boardframe Holds Reference to the BoardFrame class
 	 * @param board Holds reference to the Board class
@@ -105,7 +114,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that determines if a word is playable
 	 */
 	public String isThisWord(){
@@ -280,7 +290,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Boolean method that determins if a word is forward
 	 * @return Returns true a word is playable forward
 	 */
@@ -292,7 +303,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Boolean method that determins if a word is backwards
 	 * @return Returns false a word is playable backwards
 	 */
@@ -304,7 +316,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that adds letters to a specific coordinate
 	 * @param row Holds reference t a specific row
 	 * @param col Holds reference to a specific column
@@ -319,7 +332,8 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that clears the space
 	 */
 	public void clear(){
@@ -332,18 +346,35 @@ public class WordChecker_047 {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
 	 * Method that returns if a row coordinate is zero
 	 * @return A row coordinate that equals zero
 	 */
 	public boolean isZero(){
 		return _rowCoordinates.size() == 0;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * Method that gets a specific int in a row
+	 */
 	public ArrayList<Integer> getRowCoordinates(){
 		return _rowCoordinates;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * Method that gets a specific int in a column
+	 */
 	public ArrayList<Integer> getColCoordinates(){
 		return _colCoordinates;
 	}

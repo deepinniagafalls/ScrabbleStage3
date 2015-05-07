@@ -163,7 +163,11 @@ public class BoardFrame_047 extends JFrame {
 	
 	public BoardFrame_047(Scrabble_024_047 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024_047 scrabble, String path){
 
-	        
+		try {
+          UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
+      } catch(Exception e) {
+          e.printStackTrace();
+      } 
 	    _pf = pf;
 		_s = s;
 		_board = b;

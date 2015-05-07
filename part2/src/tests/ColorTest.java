@@ -21,7 +21,7 @@ public class ColorTest {
 	@Test
 	public void checkColor() throws IOException {
 		TileSpace_047 ts = new TileSpace_047(0, 0, null, null, 0, 0);
-		Game_047 g = new Game_047(null, false, null, null, null);
+		Game_047 g = new Game_047(null, false, null, null, 0, null);
 		for(int i = 0; i<g.getNumOfPlayers(); i=i+1){
 			Color expected = null;
 			Color actual = g.getPlayer(i).getColor();

@@ -15,6 +15,7 @@ public interface IServer extends Remote {
 	
 	public static final String SERVER_REGISTRY_KEY = "Vote";
 
+	
 	/**
 	 * Registers IClient c as an observer of changes on the server.
 	 * @param c

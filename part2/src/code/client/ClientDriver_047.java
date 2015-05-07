@@ -6,6 +6,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.SwingUtilities;
@@ -24,10 +25,11 @@ import alphonce.i.IServer;
  */
 
 public class ClientDriver_047 {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, SQLException {
 		if (args.length != 2) {
 			System.err.println("usage: ClientDriver <hostname> <portnumber>");
-			System.exit(1);
+			new Game_047("CUI", false, null, null, null);		
+			//System.exit(1);
 		}
 		String hostName = args[0];
 		int portNumber = 50047;

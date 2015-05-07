@@ -76,7 +76,7 @@ public class LoadGame_047 {
 	 */
 	private String _fileToRead;
 	
-	private String[] _tokens = new String[4];
+	private String[] _tokens = new String[6];
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -103,59 +103,89 @@ public class LoadGame_047 {
 	String filetoRead = path + filename; _fileToRead = filetoRead;
 	File file = new File(_fileToRead); FileReader fw = new FileReader(file.getAbsoluteFile());
 	BufferedReader bw = new BufferedReader(fw);
-	/*
-	int counter = 0;
-	Scanner sc = new Scanner(filetoRead);
-	while(sc.hasNextLine()){
-		System.out.println(counter);
-		_tokens[counter] = sc.nextLine();
-		counter = counter + 1;
-	}
-	*/
-	/*
-	String s = (bw.readLine());
-	String delims = "\r\n";
-	_tokens = s.split(delims);
-	*/
 
 	
-	String str;
-	
-    while((str = bw.readLine()) != null){
-        //_tokens = str.split();
-        for(int i=0 ; i<4 ; i++){
-            _tokens[i] = bw.readLine();
-            System.out.println("Got it");
-        }
-	
+	 String fileName = filetoRead;
+
+     // This will reference one line at a time
+     String line = null;
+
+     try {
+         // FileReader reads text files in the default encoding.
+         FileReader fileReader = 
+             new FileReader(fileName);
+
+         // Always wrap FileReader in BufferedReader.
+         BufferedReader bufferedReader = 
+             new BufferedReader(fileReader);
+
+         int counter = 0;
+         
+         while((line = bufferedReader.readLine()) != null) {
+             //System.out.println(line);
+             _tokens[counter] = line;
+             counter = counter + 1;
+         }    
+
+         // Always close files.
+         bufferedReader.close();            
+     }
+     catch(FileNotFoundException ex) {
+         System.out.println(
+             "Unable to open file '" + 
+             fileName + "'");                
+     }
+     catch(IOException ex) {
+         System.out.println(
+             "Error reading file '" 
+             + fileName + "'");                   
+         // Or we could just do this: 
+         // ex.printStackTrace();
+     }
+
+	/*
 	for (int i = 0; i < _tokens.length; i++){
 		
 	    System.out.println(_tokens[i]);
 	    System.out.print("....................");
 	    
 	}
+	*/
 	
+     
 	updateBoard();
 	updatePlayers();
 	
-    }
+	
 	
 	}
 
 public void updateBoard(){
 	String [] Tile_024s = new String[400];
 	String s = _tokens[5];
+	System.out.println(s);
 	int counter = 0;
 	
 	for(int i = 0; i < s.length(); i++){
 		
 		if(s.charAt(i)!= '-'){
-			Tile_024s[counter] = s.substring(i, i+35);
-			i = i+34;
+			Tile_024s[counter] = s.substring(i, i+38);
+			i = i+37;
 			counter = counter + 1;
-			}}
+			}
+		
+		else{
+			Tile_024s[counter] = "-";
+			counter = counter + 1;
+		}
+		
+	}
 	
 	//Board board;
+	
+	for(int i = 0; i < Tile_024s.length; i++){
+		System.out.println(Tile_024s[i]);
+	}
 	
 	for(int row = 0; row < 20; row ++){
 		for(int col = 0; col < 20; col ++){
@@ -163,7 +193,9 @@ public void updateBoard(){
 				_b.addTile(null,row,col);
 			}
 			else{
+				//System.out.println(Tile_024s[(row*20)+col].charAt(1));
 				char i = Tile_024s[(row*20)+col].charAt(1);
+				
 				if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
 					_b.addTile(new Tile_024(i,1),row,col);
 					_bf.getTileSpace(row, col).setText(Character.toString(i));

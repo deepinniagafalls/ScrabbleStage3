@@ -12,8 +12,7 @@ import java.util.ArrayList;
 import javax.swing.SwingUtilities;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import alphonce.client.ClientUI;
-import alphonce.i.IServer;
+import code.i.*;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -26,7 +25,7 @@ import alphonce.i.IServer;
 
 public class ClientDriver_047 {
 	public static void main(String[] args) throws IOException, SQLException {
-		if (args.length != 2) {
+		if (args.length < 2) {
 			System.err.println("usage: ClientDriver <hostname> <portnumber>");
 			System.exit(1);
 		}
@@ -61,10 +60,10 @@ public class ClientDriver_047 {
 			System.exit(1);
 		}
 		// Try to get reference to remote server object 
-		IServer server = null;
+		ServerI server = null;
 		try {
 			System.out.println("[CLIENT] Trying to retrieve remote server from registry.");
-			server = (IServer) registry.lookup(IServer.SERVER_REGISTRY_KEY);
+			server = (ServerI) registry.lookup(ServerI.SERVER_REGISTRY_KEY);
 			System.out.println("[CLIENT] Received reference to remote server.");
 		}
 		
@@ -79,13 +78,13 @@ public class ClientDriver_047 {
 			System.exit(1);
 		}
 		catch (NotBoundException e) {
-			System.err.println("[CLIENT] Server not bound with name \""+IServer.SERVER_REGISTRY_KEY+"\"");
+			System.err.println("[CLIENT] Server not bound with name \""+ServerI.SERVER_REGISTRY_KEY+"\"");
 			e.printStackTrace();
 			System.exit(1);
 		}
 		
 		// Connection ready - start up the client!
-		SwingUtilities.invokeLater(new Game_047(hostName, false, hostName, hostName, null));
+		SwingUtilities.invokeLater(new Game_047("Network", false, args[3], hostName, portNumber, null));
 	}  
 
 	}

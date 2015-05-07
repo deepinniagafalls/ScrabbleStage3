@@ -9,14 +9,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 
 import code.base.Board_024;
 import code.base.Inventory_024;
 //import code.base.ServerCode_024;
-import server.Tile_024;
-import code.base.Board_024;
+
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 import code.client.BoardFrame_047;
@@ -103,10 +103,30 @@ public class LoadGame_047 {
 	String filetoRead = path + filename; _fileToRead = filetoRead;
 	File file = new File(_fileToRead); FileReader fw = new FileReader(file.getAbsoluteFile());
 	BufferedReader bw = new BufferedReader(fw);
-	
+	/*
+	int counter = 0;
+	Scanner sc = new Scanner(filetoRead);
+	while(sc.hasNextLine()){
+		System.out.println(counter);
+		_tokens[counter] = sc.nextLine();
+		counter = counter + 1;
+	}
+	*/
+	/*
 	String s = (bw.readLine());
 	String delims = "\r\n";
 	_tokens = s.split(delims);
+	*/
+
+	
+	String str;
+	
+    while((str = bw.readLine()) != null){
+        //_tokens = str.split();
+        for(int i=0 ; i<4 ; i++){
+            _tokens[i] = bw.readLine();
+            System.out.println("Got it");
+        }
 	
 	for (int i = 0; i < _tokens.length; i++){
 		
@@ -115,9 +135,10 @@ public class LoadGame_047 {
 	    
 	}
 	
-	updatePlayers();
 	updateBoard();
+	updatePlayers();
 	
+    }
 	
 	}
 
@@ -126,7 +147,7 @@ public void updateBoard(){
 	String s = _tokens[5];
 	int counter = 0;
 	
-	for(int i = 0; i <s.length(); i++){
+	for(int i = 0; i < s.length(); i++){
 		
 		if(s.charAt(i)!= '-'){
 			Tile_024s[counter] = s.substring(i, i+35);
@@ -139,18 +160,22 @@ public void updateBoard(){
 	for(int row = 0; row < 20; row ++){
 		for(int col = 0; col < 20; col ++){
 			if(Tile_024s[(row*20)+col] == "-"){
-				_b.setTile_024(null,row,col);
+				_b.addTile(null,row,col);
 			}
 			else{
 				char i = Tile_024s[(row*20)+col].charAt(1);
 				if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
-					_b.setTile_024(new Tile_024(i,1),row,col);
+					_b.addTile(new Tile_024(i,1),row,col);
+					_bf.getTileSpace(row, col).setText(Character.toString(i));
 				}
 				else if(i == 'Y'){
-					_b.setTile_024(new Tile_024(i,2),row,col);
+					_b.addTile(new Tile_024(i,2),row,col);
+					_bf.getTileSpace(row, col).setText(Character.toString(i));
 				}
 				else{
-					_b.addTile_024(new Tile_024(i,5),row,col);}}}}}
+					_b.addTile(new Tile_024(i,5),row,col);
+					_bf.getTileSpace(row, col).setText(Character.toString(i));}}}}}
+
 
 
 
@@ -161,8 +186,8 @@ public void updatePlayers(){
 	//_scrabble = new ServerCode(numOfPlayers);
 	for(int i = 0; i < numOfPlayers; i++){
 		String[] info = playerList[i].split(",");
-		_scrabble.getPlayer(i).setName(info[0]);
-		
+		//_scrabble.returnPlayer(i).setName(info[0]);
+		/*
 		String colorInputs = info[1].replace("java.awt.Color[", "");
 		colorInputs = colorInputs.replace("r=", "");
 		colorInputs = colorInputs.replace("b=", "");
@@ -176,17 +201,17 @@ public void updatePlayers(){
 				
 		Color savedColor = new Color(red,blue,green);
 		
-		_scrabble.getPlayer(i).setColor(savedColor);
+		_scrabble.returnPlayer(i).setColor(savedColor);
+		*/
 	}
 }
 
 
 public void updateInventory(){
-	Inventory inv = _scrabble.getInventory();
+	Inventory_024 inv = _scrabble.getInv();
 	String inventoryData = _tokens[4];
 	String allTile_024s = inventoryData.replace("[", "");
 	allTile_024s = allTile_024s.replace("]", "");
-	inv.resetTile_024Bag();
 	for(int i = 0; i< allTile_024s.length();i++){
 		
 	}

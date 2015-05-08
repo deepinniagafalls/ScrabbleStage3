@@ -269,7 +269,7 @@ public void updatePlayers(){
 		
 		String tilesToGrab = info[5].replace("[","");
 		tilesToGrab = tilesToGrab.replace("]","");
-		_bf.getPlayerFrame(i).setPoints(info[4]);
+		_bf.getPlayerFrame(i).setPoints("Points: " + info[4]);
 		
 		//_scrabble.returnPlayer(i).setColor(savedColor);
 		for(int k = 0; k<12; k++){

@@ -28,7 +28,7 @@ import code.client.PlayerFrame_047;
  * The SaveGame class is responsible for saving the current state of the game in a text file.
  */
 @SuppressWarnings("unused")
-public class SaveGame_047 {
+public class SaveString {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -85,6 +85,8 @@ public class SaveGame_047 {
 		//t.writeNewFile();
 		
 	//}
+	
+	private String _bw;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -99,7 +101,7 @@ public class SaveGame_047 {
 	 * @throws Throws IOException
 	 */
 	
-	public SaveGame_047(Board_024 b, BoardFrame_047 bf, Scrabble_024_047 s) throws IOException{
+	public SaveString(Board_024 b, BoardFrame_047 bf, Scrabble_024_047 s) throws IOException{
 		_b = b;
 		_bf = bf;	
 
@@ -111,65 +113,64 @@ public class SaveGame_047 {
 			chooser.setDirectory("C:\\");chooser.setFile("*.txt");chooser.setVisible(true);
 			String filename = chooser.getFile();
 			String path = chooser.getDirectory();
-			//System.out.println(path);
+			System.out.println(path);
 			String filetoWrite = path + filename;
 			_fileToWriteTo = filetoWrite;
 			
 			File file = new File(_fileToWriteTo);
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
-			BufferedWriter bw = new BufferedWriter(fw);
+			//String bw = new String();
 			
-
 			String boardsize = "20 20";
-			bw.write(boardsize);
-			bw.write("\r\n");
+			addToString(boardsize);
+			addToString("\n");
 			
 			String content = "/part2/res/words.txt";
-			bw.write(content);
-			bw.write("\r\n");
+			addToString(content);
+			addToString("\n");
 			
 			for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
 				Player_024_047 p = _scrabble.returnPlayer(i);
 				
-				bw.write("[" + p.getName() + "," +p.getColor() + "," + p.getScore());
-				bw.write(",");
-				bw.write("[");
+				addToString("[" + p.getName() + "," +p.getColor() + "," + p.getScore());
+				addToString(",");
+				addToString("[");
 				for(int j = 0; j <12; j = j+1){
-					bw.write(p.getTileRack().getTile(j).getChar());
+					addToString(Character.toString(p.getTileRack().getTile(j).getChar()));
 				}
-				bw.write("]");
-				bw.write("]");
+				addToString("]");
+				addToString("]");
 				if(i < _scrabble.getNumofPlayers()-1){
-					bw.write(";");
+					addToString(";");
 				}
 			}
 			
-			bw.write("\r\n");
+			addToString("\n");
 			
 			int turn = _scrabble.getGame().getCurrentTurn();
-			bw.write(turn);
-			bw.write("\r\n");
+			addToString(Integer.toString(turn));
+			addToString("\n");
 			
 			for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
-				bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
+				addToString("[" + _scrabble.getInv().getTile(i).getChar() + "]");
 			}
-			bw.write("\r\n");
+			addToString("\n");
 			
 			for(int i = 0; i<20; i = i + 1){
 				for(int j = 0; j<20; j = j +1){
 					if(_scrabble.getBoard().getTile(i, j) == null){
-						bw.write("-");
+						addToString("-");
 					}
 					else{
 						_scrabble.getBoard().getTile(i, j).getChar();
 						_scrabble.getBoard().getTile(i,j).getColor();
-						bw.write("[" + _scrabble.getBoard().getTile(i, j).getChar() +  ", " + _scrabble.getBoard().getTile(i, j).getColor() + "]");
+						addToString("[" + _scrabble.getBoard().getTile(i, j).getChar() +  ", " + _scrabble.getBoard().getTile(i, j).getColor() + "]");
 					}
 					
 				}
 			}
-			bw.close();
-			//System.out.println("Done");
+			//bw.close();
+			System.out.println(_bw);
 			
 		}
 	
@@ -185,6 +186,10 @@ public class SaveGame_047 {
 	public void writeNewFile() throws IOException{
 		
 		
+	}
+	
+	public void addToString(String newString){
+		_bw = _bw + newString;
 	}
 	
 }

@@ -19,6 +19,7 @@ import javax.swing.UIManager;
 
 import code.LoadGame_047;
 import code.SaveGame_047;
+import code.SaveString;
 import code.WordChecker_047;
 import code.base.Board_024;
 import code.base.Player_024_047;
@@ -317,6 +318,12 @@ public class Extravaganza_047 extends JFrame {
 			if (value == JFileChooser.CANCEL_OPTION) {
 			}
 			c.setVisible(true);*/
+			try {
+				SaveString ss = new SaveString(_scrabble.getBoard(), _bf, _scrabble);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	}
 	/**

@@ -1,0 +1,11 @@
+﻿Group Meeting on 5/8/15
+
+
+What we accomplished today:
+-Updated technical guide
+-Updated user guide
+-Updated design document
+-Attempted to get RMI working
+
+
+The meeting lasted approximately 5 hours.

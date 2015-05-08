@@ -1,0 +1,9 @@
+﻿Group Meeting on 5/5/15
+
+
+What we accomplished today:
+-Worked on the loading feature of the game.
+-Worked on adding JUnit tests to our program.
+
+
+The meeting lasted approximately 2.5 hours.

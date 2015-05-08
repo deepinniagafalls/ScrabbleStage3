@@ -1,0 +1,9 @@
+﻿Group Meeting on 5/7/15
+
+
+What we accomplished today:
+-Finished the restore functionality of the game for Tile Racks and Inventory
+-Added more JUnit tests to the program
+
+
+The meeting lasted approximately 4 hours.

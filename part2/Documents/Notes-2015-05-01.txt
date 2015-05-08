@@ -1,0 +1,9 @@
+﻿Group Meeting on 5/1/15
+
+
+What we accomplished today:
+-Fixed the multipliers so that they accurately alter the point value of a letter/word. Player's scores are now updated to reflect this change.
+-Made some fundamental changes to the organization/structure of our code to hopefully separate the functionality of our model from the GUI. 
+
+
+-The meeting lasted approximately 5.5 hours.

@@ -1,0 +1,11 @@
+﻿Group Meeting on 4/18/15
+
+
+What we accomplished today:
+-We read over the RMI implementation instructions and looked at the RMI example.
+-We discussed and started to adjust the organization of our project's GUI to hopefully simplify working on it in the future.
+  
+
+
+
+The meeting lasted approximately 1 hour.

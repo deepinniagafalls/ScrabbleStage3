@@ -1,0 +1,10 @@
+﻿Group Meeting on 4/29/15
+
+
+What we accomplished today:
+-Fixed bug in the Tile Rack where it would incorrectly refill itself when a player attempted to switch the positioning of tiles located within the Tile Rack.
+-Continued to work on correcting the multipliers implementation
+-Continued experimenting with RMI
+
+
+-The meeting lasted approximately 1 hour.

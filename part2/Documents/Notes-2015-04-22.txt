@@ -1,0 +1,9 @@
+﻿Group Meeting on 4/22/15
+
+
+What we accomplished today:
+-Continued to research RMI implementation
+-Worked on letter and word multipliers. Finished the graphic representations associated with the word multipliers.
+
+
+The meeting lasted approximately 2 hours.

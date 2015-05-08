@@ -1,0 +1,9 @@
+﻿Group Meeting on 4/15/15
+
+
+What we accomplished today:
+-We added the functionality for a player losing his or her turn if he or she makes an invalid word placement. 
+-We discussed plans on how to implement the score multipliers, most likely by creating private instance variables for the Board class.
+
+
+The meeting lasted approximately 1 hour.

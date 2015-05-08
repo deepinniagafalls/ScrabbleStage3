@@ -1,0 +1,8 @@
+﻿Group Meeting on 5/4/15
+
+
+What we accomplished today:
+-Worked on adding functionality to the Tile Rack class of our new project. We eventually decided that continuing to add functionality to the new version of our project would take too long, so we scrapped it.
+
+
+The meeting lasted approximately 1.5 hours.

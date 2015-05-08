@@ -1,0 +1,10 @@
+﻿Group Meeting on 4/27/15
+
+
+What we accomplished today:
+-Began work on getting the letter/word multipliers to actually influence the point value of a letter/word. Did not finish the multiplier's full functionality. 
+-Tested the code for bugs.
+-Continued research into RMI implementation
+
+
+-The meeting lasted approximately 1.5 hours.

@@ -186,7 +186,10 @@ public class ServerS implements ServerI, Runnable {
 	 */
 	@Override
 	public void passTurn(String data) throws RemoteException {
-		// TODO Auto-generated method stub
+		//updates UI for the clients
+		for(ClientI c : _observers){
+			c.update(data);
+		}
 		
 	}
 		

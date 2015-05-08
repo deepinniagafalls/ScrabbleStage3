@@ -194,4 +194,8 @@ public class SaveString {
 		_bw = _bw + newString;
 	}
 	
+	public String returnGameInfo(){
+		return _bw;
+	}
+	
 }

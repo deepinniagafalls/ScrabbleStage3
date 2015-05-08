@@ -97,70 +97,12 @@ public class UpdateGUI {
 	_bf = bf;
 	_scrabble = scrabble;
 	_gameInfo = gameInfo;
-	
-	JFrame jf = new JFrame();
-	FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.LOAD);
-	chooser.setDirectory("C:\\"); chooser.setFile("*.txt");
-	chooser.setVisible(true); String filename = chooser.getFile();
-	String path = chooser.getDirectory(); 
-	//System.out.println(path);
-	String filetoRead = path + filename; _fileToRead = filetoRead;
-	File file = new File(_fileToRead); FileReader fw = new FileReader(file.getAbsoluteFile());
-	BufferedReader bw = new BufferedReader(fw);
 
-	
-	 String fileName = filetoRead;
+     _tokens = _gameInfo.split("/n");
 
-     // This will reference one line at a time
-     String line = null;
-
-     try {
-         // FileReader reads text files in the default encoding.
-         FileReader fileReader = 
-             new FileReader(fileName);
-
-         // Always wrap FileReader in BufferedReader.
-         BufferedReader bufferedReader = 
-             new BufferedReader(fileReader);
-
-         int counter = 0;
-         
-         while((line = bufferedReader.readLine()) != null) {
-             //System.out.println(line);
-             _tokens[counter] = line;
-             counter = counter + 1;
-         }    
-
-         // Always close files.
-         bufferedReader.close();            
-     }
-     catch(FileNotFoundException ex) {
-         System.out.println(
-             "Unable to open file '" + 
-             fileName + "'");                
-     }
-     catch(IOException ex) {
-         System.out.println(
-             "Error reading file '" 
-             + fileName + "'");                   
-         // Or we could just do this: 
-         // ex.printStackTrace();
-     }
-
-	/*
-	for (int i = 0; i < _tokens.length; i++){
-		
-	    System.out.println(_tokens[i]);
-	    System.out.print("....................");
-	    
-	}
-	*/
-	
      
 	updateBoard();
 	updatePlayers();
-	
-	
 	
 	}
 

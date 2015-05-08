@@ -80,6 +80,22 @@ public class Inventory_024 {
 	 * Mehod that removes a random tile from the bag
 	 * @return Returns the removal of a random index
 	 */
+	
+	public void loadInv(String letters){
+		for(int i = 0; i <letters.length(); i++){
+			_tileBag = new ArrayList<Tile_024>();
+			if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
+					_tileBag.add(new Tile_024((char)i,1));
+				}
+			else if (i == 'Y'){
+					_tileBag.add(new Tile_024((char)i,2));
+				}
+			else{
+				_tileBag.add(new Tile_024((char)i,5));
+			}
+		}
+	}
+	
 	public Tile_024 removeRandomTile(){
 		int randomIndex = new Random().nextInt(_tileBag.size()-1);
 		return _tileBag.remove(randomIndex);

@@ -20,9 +20,9 @@ public class ClientUI implements Runnable, IClient {
 
 	private JTextField _tf;
 	private JFrame _window;
-	private IServer _server;
+	private ServerI _server;
 
-	public ClientUI(IServer s, String hostName, int portNumber) {
+	public ClientUI(ServerI s, String hostName, int portNumber) {
 		_server = s;
 		IClient me = null;
 		try {

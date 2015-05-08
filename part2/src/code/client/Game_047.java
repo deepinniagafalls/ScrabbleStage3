@@ -146,6 +146,11 @@ public class Game_047 implements Runnable, ClientI {
 	       String e4 = "";
 	       String p = "";
 	       String path = "";
+	       System.out.print("Are you starting the game? Type Yes or No ");
+	       Scanner scan2n = new Scanner(System.in);
+	       String st = scan2n.nextLine();
+	       boolean start = false;
+	       if(st == "Yes"){start = true;} else{start = false;}
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(mode){

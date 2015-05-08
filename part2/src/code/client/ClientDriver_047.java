@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import javax.swing.SwingUtilities;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import client.ClientUI;
 import code.i.*;
 
 /**
@@ -85,7 +86,8 @@ public class ClientDriver_047 {
 		}
 		
 		// Connection ready - start up the client!
-		SwingUtilities.invokeLater(new Game_047("Network", false, args[3], hostName, portNumber, server));
+		SwingUtilities.invokeLater(new ClientUI(server, hostName, portNumber));
+		//SwingUtilities.invokeLater(new Game_047("Network", false, args[3], hostName, portNumber, server));
 	}  
 
 	}

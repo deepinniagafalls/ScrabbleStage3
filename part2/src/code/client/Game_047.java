@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;

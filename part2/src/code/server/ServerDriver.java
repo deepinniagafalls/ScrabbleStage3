@@ -4,16 +4,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import code.i.ServerI;
-import alphonce.i.IServer;
-import alphonce.server.Server;
 
 import java.rmi.NoSuchObjectException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-
-import alphonce.i.IServer;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
@@ -69,9 +65,9 @@ public class ServerDriver {
 		System.out.println("Server started.");
 		// Try to create remote server object, the 'stub'
 		System.out.println("Creating remote server object...");
-		IServer stub = null;
+		ServerI stub = null;
 		try {
-			stub = (IServer) UnicastRemoteObject.exportObject(engine, 50000);
+			stub = (ServerI) UnicastRemoteObject.exportObject(engine, 50000);
 			System.out.println("Server started normally.");
 		}
 		catch (RemoteException e) {
@@ -89,9 +85,9 @@ public class ServerDriver {
 				System.exit(1);
 			}
 		}
-		System.out.println("Trying to register remote server object in RMI registry with name "+IServer.SERVER_REGISTRY_KEY);
+		System.out.println("Trying to register remote server object in RMI registry with name "+ServerI.SERVER_REGISTRY_KEY);
 		try {
-			registry.rebind(IServer.SERVER_REGISTRY_KEY, stub);
+			registry.rebind(ServerI.SERVER_REGISTRY_KEY, stub);
 			System.out.println("Server bound in registry normally.");
 		}
 		catch (RemoteException e) {

@@ -146,11 +146,11 @@ public class Game_047 implements Runnable, ClientI {
 	       String e4 = "";
 	       String p = "";
 	       String path = "";
-	       System.out.print("Are you starting the game? Type Yes or No ");
+	       System.out.print("Are you starting the game? Type Yes(1) or No(2) ");
 	       Scanner scan2n = new Scanner(System.in);
 	       String st = scan2n.nextLine();
 	       boolean start = false;
-	       if(st == "Yes"){start = true;} else{start = false; mode = false;}
+	       if(st == "1"){start = true; mode = true;} else{start = false; mode = false;}
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(mode){
@@ -286,7 +286,6 @@ public class Game_047 implements Runnable, ClientI {
 		_bf = boardframe;
 		
 		
-		/*
 		try {
 			boolean retry = false;
 			do {
@@ -321,7 +320,6 @@ public class Game_047 implements Runnable, ClientI {
 			e.printStackTrace();
 			System.exit(1);
 		}
-		*/
 	}
 
 	

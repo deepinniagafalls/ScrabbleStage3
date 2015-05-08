@@ -84,7 +84,7 @@ public class ClientDriver_047 {
 			System.exit(1);
 		}
 		
-		SwingUtilities.invokeLater(new Game_047("Network", false, args[3], hostName, portNumber, server));
+		SwingUtilities.invokeLater(new Game_047("Network", false, args[2], hostName, portNumber, server));
 	}  
 
 	}

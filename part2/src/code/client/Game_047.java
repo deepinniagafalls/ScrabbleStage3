@@ -150,7 +150,7 @@ public class Game_047 implements Runnable, ClientI {
 	       Scanner scan2n = new Scanner(System.in);
 	       String st = scan2n.nextLine();
 	       boolean start = false;
-	       if(st == "Yes"){start = true;} else{start = false;}
+	       if(st == "Yes"){start = true;} else{start = false; mode = false;}
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(mode){
@@ -266,8 +266,8 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		else{
 		_numberOfPlayers = 2;
-		_names.add("Frigg");
-		_names.add("Freya");
+		_names.add("Wait for");
+		_names.add("Other Player to pass a turn");
 		}
 		Scrabble_024_047 scrabble = new Scrabble_024_047(_numberOfPlayers, this);
 		Inventory_024 invent = scrabble.getInv();

@@ -29,7 +29,7 @@ import code.client.Game_047;
  * @date 2015-APRIL-10
  * LoadGame is responsible for restoring a previously saved game state.
  */
-public class LoadGame_047 {
+public class UpdateGUI {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -77,6 +77,9 @@ public class LoadGame_047 {
 	private String _fileToRead;
 	
 	private String[] _tokens = new String[6];
+	
+	
+	private String _gameInfo;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -89,77 +92,22 @@ public class LoadGame_047 {
 	 * @param Reference to the BoardFrame class
 	 * @throws IOException
 	 */
-	public LoadGame_047(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf) throws IOException{
+	public UpdateGUI(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf, String gameInfo) throws IOException{
 	_b = b;
 	_bf = bf;
 	_scrabble = scrabble;
-	
-	JFrame jf = new JFrame();
-	FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.LOAD);
-	chooser.setDirectory("C:\\"); chooser.setFile("*.txt");
-	chooser.setVisible(true); String filename = chooser.getFile();
-	String path = chooser.getDirectory(); 
-	//System.out.println(path);
-	String filetoRead = path + filename; _fileToRead = filetoRead;
-	File file = new File(_fileToRead); FileReader fw = new FileReader(file.getAbsoluteFile());
-	BufferedReader bw = new BufferedReader(fw);
+	_gameInfo = gameInfo;
 
-	
-	 String fileName = filetoRead;
+     _tokens = _gameInfo.split("/n");
 
-     // This will reference one line at a time
-     String line = null;
-
-     try {
-         // FileReader reads text files in the default encoding.
-         FileReader fileReader = 
-             new FileReader(fileName);
-
-         // Always wrap FileReader in BufferedReader.
-         BufferedReader bufferedReader = 
-             new BufferedReader(fileReader);
-
-         int counter = 0;
-         
-         while((line = bufferedReader.readLine()) != null) {
-             //System.out.println(line);
-             _tokens[counter] = line;
-             counter = counter + 1;
-         }    
-
-         // Always close files.
-         bufferedReader.close();            
-     }
-     catch(FileNotFoundException ex) {
-         System.out.println(
-             "Unable to open file '" + 
-             fileName + "'");                
-     }
-     catch(IOException ex) {
-         System.out.println(
-             "Error reading file '" 
-             + fileName + "'");                   
-         // Or we could just do this: 
-         // ex.printStackTrace();
-     }
-
-	/*
-	for (int i = 0; i < _tokens.length; i++){
-		
-	    System.out.println(_tokens[i]);
-	    System.out.print("....................");
-	    
-	}
-	*/
-	
      
 	updateBoard();
 	updatePlayers();
-	updateInventory();
-	
 	
 	}
 
+	
+	
 public void updateBoard(){
 	String [] Tile_024s = new String[400];
 	String s = _tokens[5];
@@ -286,8 +234,9 @@ public void updateInventory(){
 	String inventoryData = _tokens[4];
 	String allTile_024s = inventoryData.replace("[", "");
 	allTile_024s = allTile_024s.replace("]", "");
-	_scrabble.getInv().loadInv(allTile_024s);
-	
+	for(int i = 0; i< allTile_024s.length();i++){
+		
+	}
 	
 }
 /*

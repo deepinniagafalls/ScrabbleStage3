@@ -23,7 +23,25 @@ import code.base.Player_024_047;
  * The HighScore class is responsible for saving the name of Players and their corresponding scores to a text file
  */
 public class HighScore_047 {
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * Instance variable that holds reference to an ArrayList of players
+	 */
 	ArrayList<Player_024_047> _p;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * Instance variable that holds reference to an ArrayLsit of Strings
+	 */
 	ArrayList<String> _words;
 	public HighScore_047(){
 	}

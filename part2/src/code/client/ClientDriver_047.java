@@ -19,8 +19,9 @@ import code.i.*;
  * @author ceelman (Chris Elman)
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
- * @date 2015-APRIL-10
- * Driver class with the main method that runs the game
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
+ * This class created a client that can connet to the server and play the game within the hostname and portnumber
  */
 
 public class ClientDriver_047 {

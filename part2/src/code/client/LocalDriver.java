@@ -8,11 +8,13 @@ public class LocalDriver {
 		// TODO Auto-generated method stub
 		String hostName = "host";
 		try {
-			new Game_047("GUI", false, null, null, 0, null);
+			Game_047 g = new Game_047("GUI", false, null, null, 0, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 }

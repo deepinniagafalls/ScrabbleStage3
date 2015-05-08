@@ -92,6 +92,7 @@ public class Scrabble_024_047 {
 	
 	public Scrabble_024_047(int numberOfPlayers, Game_047 g){
 		_inv = new Inventory_024();
+		System.out.println(_inv.getSize());
 		_board = new Board_024();
 		_numberOfPlayers = numberOfPlayers;
 		_g = g;
@@ -103,6 +104,7 @@ public class Scrabble_024_047 {
 		catch(IllegalArgumentException e){
 			JOptionPane.showMessageDialog(null, "The maximum number of players is four");
 		}
+		
 
 	}
 	

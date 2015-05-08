@@ -272,4 +272,20 @@ public class Board_024 {
 	public void setWordMultipliers(int index){
 		_wordMultipliers[index] = 1;
 	}
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * This method is responsible for clearing the Board
+	 */
+	public void clearBoard(){
+		for(int row= 0; row < 20; row++){
+			for(int col = 0; col < 20; col++){
+				_board[row][col] = null;
+			}
+		}
+	}
 }

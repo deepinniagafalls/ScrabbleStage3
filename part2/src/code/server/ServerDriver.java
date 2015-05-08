@@ -14,7 +14,15 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 import alphonce.i.IServer;
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @author shokoors (Shokoor Syed)
+ * @date 2015-MARCH-7
+ * This class is responsible for starting up the server so that clients can connect to it
+ */
 public class ServerDriver {
 
 	public static void main(String[] args) {

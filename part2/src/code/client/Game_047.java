@@ -270,7 +270,7 @@ public class Game_047 implements Runnable, ClientI {
 			_playerFrameList.add(new PlayerFrame_047(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
 		}
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
-		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path);
+		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server);
 		/*
 		try {
 			boolean retry = false;

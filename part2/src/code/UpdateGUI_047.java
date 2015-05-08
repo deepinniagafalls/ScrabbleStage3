@@ -29,7 +29,7 @@ import code.client.Game_047;
  * @date 2015-APRIL-10
  * LoadGame is responsible for restoring a previously saved game state.
  */
-public class UpdateGUI {
+public class UpdateGUI_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -92,7 +92,7 @@ public class UpdateGUI {
 	 * @param Reference to the BoardFrame class
 	 * @throws IOException
 	 */
-	public UpdateGUI(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf, String gameInfo) throws IOException{
+	public UpdateGUI_047(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf, String gameInfo) throws IOException{
 	_b = b;
 	_bf = bf;
 	_scrabble = scrabble;

@@ -30,7 +30,7 @@ public class ServerS implements ServerI, Runnable {
 
 	@Override
 	public void run() {
-		System.out.print("Client Requested to check whether there is a connection between the client and the server"");
+		System.out.print("Client Requested to check whether there is a connection between the client and the server");
 		
 	}
 

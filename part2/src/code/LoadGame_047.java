@@ -155,7 +155,7 @@ public class LoadGame_047 {
      
 	updateBoard();
 	updatePlayers();
-	
+	updateInventory();
 	
 	
 	}
@@ -285,9 +285,8 @@ public void updateInventory(){
 	String inventoryData = _tokens[4];
 	String allTile_024s = inventoryData.replace("[", "");
 	allTile_024s = allTile_024s.replace("]", "");
-	for(int i = 0; i< allTile_024s.length();i++){
-		
-	}
+	_scrabble.getInv().loadInv(allTile_024s);
+	
 	
 }
 /*

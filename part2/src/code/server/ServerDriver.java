@@ -69,9 +69,9 @@ public class ServerDriver {
 		System.out.println("Server started.");
 		// Try to create remote server object, the 'stub'
 		System.out.println("Creating remote server object...");
-		IServer stub = null;
+		ServerI stub = null;
 		try {
-			stub = (IServer) UnicastRemoteObject.exportObject(engine, 50000);
+			stub = (ServerI) UnicastRemoteObject.exportObject(engine, 50000);
 			System.out.println("Server started normally.");
 		}
 		catch (RemoteException e) {
@@ -89,9 +89,9 @@ public class ServerDriver {
 				System.exit(1);
 			}
 		}
-		System.out.println("Trying to register remote server object in RMI registry with name "+IServer.SERVER_REGISTRY_KEY);
+		System.out.println("Trying to register remote server object in RMI registry with name "+ServerI.SERVER_REGISTRY_KEY);
 		try {
-			registry.rebind(IServer.SERVER_REGISTRY_KEY, stub);
+			registry.rebind(ServerI.SERVER_REGISTRY_KEY, stub);
 			System.out.println("Server bound in registry normally.");
 		}
 		catch (RemoteException e) {

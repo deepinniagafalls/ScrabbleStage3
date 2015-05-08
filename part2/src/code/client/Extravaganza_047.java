@@ -26,6 +26,7 @@ import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 import code.client.BoardFrame_047;
 import code.client.Game_047;
+import code.i.ServerI;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -187,8 +188,9 @@ public class Extravaganza_047 extends JFrame {
 	 * @param pf gets an arraylist of player frame that holds a player's inventory
 	 * @param path a string that holds path to the dictionary
 	 * Class constructor
+	 * @param _server 
 	 */
-	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
+	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path, ServerI _server) throws IOException {
 
 	       
 	    JFrame frame = new JFrame();   
@@ -203,9 +205,9 @@ public class Extravaganza_047 extends JFrame {
 		p.add(open);
 		p.add(save);
 		p.add(pass);
-		open.addActionListener(new OpenL());
-		save.addActionListener(new SaveL());
-		pass.addActionListener(new PassT(name, path));
+		open.addActionListener(new OpenL(_server));
+		save.addActionListener(new SaveL(_server));
+		pass.addActionListener(new PassT(name, path, _server));
 		label1 = new JLabel("Turn: " + name.get(0),null,JLabel.CENTER);
 		
 		
@@ -238,6 +240,10 @@ public class Extravaganza_047 extends JFrame {
 	 * Class that holds codes that make open button work
 	 */
 	public class OpenL implements ActionListener {
+		public OpenL(ServerI _server) {
+			// TODO Auto-generated constructor stub
+		}
+
 		/**
 		 * @author tylerdie (Tyler Dietrich)
 		 * @author ceelman (Chris Elman)
@@ -281,6 +287,10 @@ public class Extravaganza_047 extends JFrame {
 	 */
 	private class SaveL implements ActionListener {
 		
+		public SaveL(ServerI _server) {
+			// TODO Auto-generated constructor stub
+		}
+
 		/**
 		 * @author tylerdie (Tyler Dietrich)
 		 * @author ceelman (Chris Elman)
@@ -335,7 +345,7 @@ public class Extravaganza_047 extends JFrame {
 	private class PassT implements ActionListener {
 		private ArrayList<String> _name;
 		private String _path = "";
-		public PassT(ArrayList<String> name, String path){
+		public PassT(ArrayList<String> name, String path, ServerI server){
 			_name = name;
 		}
 		

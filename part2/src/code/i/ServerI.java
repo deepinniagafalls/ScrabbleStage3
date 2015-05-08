@@ -1,5 +1,6 @@
 package code.i;
 
+import java.io.IOException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -67,8 +68,9 @@ public interface ServerI extends Remote {
 	 * @date 2015-MARCH-7
 	 * @param data: Local variable that holds reference to a string of data
 	 * This method is responsible for passing a turn across the server
+	 * @throws IOException 
 	 */
-	public void passTurn(String data) throws RemoteException;
+	public void passTurn(String data) throws RemoteException, IOException;
 
 
 }

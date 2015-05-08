@@ -191,7 +191,7 @@ public class Extravaganza_047 extends JFrame {
 	 * Class constructor
 	 * @param _server 
 	 */
-	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path, ServerI _server) throws IOException {
+	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path, ServerI server, SaveString sunrise) throws IOException {
 
 	       
 	    JFrame frame = new JFrame();   
@@ -206,9 +206,9 @@ public class Extravaganza_047 extends JFrame {
 		p.add(open);
 		p.add(save);
 		p.add(pass);
-		open.addActionListener(new OpenL(_server));
-		save.addActionListener(new SaveL(_server));
-		pass.addActionListener(new PassT(name, path, _server));
+		open.addActionListener(new OpenL(server));
+		save.addActionListener(new SaveL(server));
+		pass.addActionListener(new PassT(name, path, server, sunrise));
 		label1 = new JLabel("Turn: " + name.get(0),null,JLabel.CENTER);
 		
 		
@@ -353,9 +353,11 @@ public class Extravaganza_047 extends JFrame {
 		private ArrayList<String> _name;
 		private String _path = "";
 		private ServerI _server;
-		public PassT(ArrayList<String> name, String path, ServerI server){
+		private SaveString _sunrise;
+		public PassT(ArrayList<String> name, String path, ServerI server, SaveString sunrise){
 			_name = name;
 			_server = server;
+			_sunrise = sunrise;
 			
 		}
 		
@@ -509,7 +511,12 @@ public class Extravaganza_047 extends JFrame {
 			_bf.getPlayerFrame(tep).update();
 			}
 			_bf.getWordChecker().clear();
-			_server.passTurn(data);
+			try {
+				_server.passTurn(_sunrise.returnGameInfo());
+			} catch (IOException e1) {
+				System.out.print("hopeless now");
+				e1.printStackTrace();
+			}
 		}
 	}
 	

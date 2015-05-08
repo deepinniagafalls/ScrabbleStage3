@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import code.SaveString;
 import code.UpdateGUI;
 import code.base.Board_024;
 import code.base.Inventory_024;
@@ -272,9 +273,11 @@ public class Game_047 implements Runnable, ClientI {
 			_playerFrameList.add(new PlayerFrame_047(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
 		}
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
-		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server);
+		SaveString sunrise = new SaveString(board, boardframe, scrabble);
+		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server, sunrise);
 		_scrabble = scrabble;
 		_bf = boardframe;
+		
 		
 		/*
 		try {

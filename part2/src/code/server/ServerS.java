@@ -1,5 +1,6 @@
 package code.server;
 
+import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
@@ -183,9 +184,10 @@ public class ServerS implements ServerI, Runnable {
 	 * @date 2015-MARCH-7
 	 * @param data: Local variable that holds reference to a string of data
 	 * This method is responsible for sending the data to the server when the pass button is clicked
+	 * @throws IOException 
 	 */
 	@Override
-	public void passTurn(String data) throws RemoteException {
+	public void passTurn(String data) throws IOException {
 		//updates UI for the clients
 		for(ClientI c : _observers){
 			c.update(data);

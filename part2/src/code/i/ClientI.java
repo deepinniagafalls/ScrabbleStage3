@@ -1,5 +1,6 @@
 package code.i;
 
+import java.io.IOException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 /**
@@ -23,8 +24,9 @@ public interface ClientI extends Remote {
 	 * @date 2015-MARCH-7
 	 * @param s: Local variable that holds reference to the large string getting passed to the server
 	 * This method constantly updates that large string
+	 * @throws IOException 
 	 */
-	public void update(String s) throws RemoteException;
+	public void update(String s) throws RemoteException, IOException;
 
 
 }

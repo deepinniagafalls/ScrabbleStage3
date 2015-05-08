@@ -94,6 +94,9 @@ public class Game_047 implements Runnable, ClientI {
 	 * Instance variable that holds reference to the current turn
 	 */
 	private static Game_047 _currentGame;
+	private Scrabble_024_047 _scrabble;
+	private Board_024 _board;
+	private BoardFrame_047 _bf;
 	
 
 	/**
@@ -270,6 +273,9 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
 		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server);
+		_scrabble = scrabble;
+		_bf = boardframe;
+		
 		/*
 		try {
 			boolean retry = false;
@@ -439,7 +445,7 @@ public class Game_047 implements Runnable, ClientI {
 	}
 
 	@Override
-	public void update(String s) throws RemoteException {
-		UpdateGUI update = new UpdateGUI(scrabble, null, null, s);
+	public void update(String s) throws IOException {
+		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);
 	}
 }

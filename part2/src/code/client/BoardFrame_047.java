@@ -305,11 +305,30 @@ public class BoardFrame_047 extends JFrame {
 	public TileSpace_047 getTileSpace(int row, int col){
 		return _boardOfButtons[row][col];
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * @param row: int variable that holds an int value
+	 * @param col: int variable that holds an int value
+	 * @param ts: Local variable that holds reference to the TileSpace class
+	 * This method is responsible for setting a TileSpace to a specific row and column
+	 */
 	public void setTileSpace(int row, int col, TileSpace_047 ts){
 		_boardOfButtons[row][col] = ts;
 	}
-
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * This method is responsible for clearing the BoardFrame
+	 */
 	public void clearBoardFrame() {
 		for(int row= 0; row < 20; row++){
 			for(int col = 0; col < 20; col++){

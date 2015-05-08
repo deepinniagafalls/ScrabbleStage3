@@ -458,6 +458,15 @@ public class Game_047 implements Runnable, ClientI {
 	@Override
 	public void update(String s, String turn) throws RemoteException,
 			IOException {
-		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);		
+		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);
+		for(int i = 0; i < _scrabble.getNumofPlayers(); i++){
+			_playerFrameList.get(i).setVisible(false);
+		if(turn == null){
+				_playerFrameList.get(i).setVisible(false);
+		}
+		else{
+			_playerFrameList.get(i).setVisible(true);
+		}
+	}
 	}
 }

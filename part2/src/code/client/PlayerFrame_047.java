@@ -365,6 +365,7 @@ public class PlayerFrame_047 {
 	public void setTitle(String name){
 		_frame.setTitle(name + "'s Tile Rack");
 	}
+
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -377,5 +378,8 @@ public class PlayerFrame_047 {
 	 */
 	public void setPoints(String points){
 		_points.setText(points);
+	}
+	public void setVisible(boolean s){
+		_frame.setVisible(s);
 	}
 }

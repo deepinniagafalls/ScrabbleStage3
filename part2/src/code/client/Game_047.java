@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import code.UpdateGUI;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
@@ -439,6 +440,6 @@ public class Game_047 implements Runnable, ClientI {
 
 	@Override
 	public void update(String s) throws RemoteException {
-		// goto load class to interprete the string and add the data into the data structure
+		UpdateGUI update = new UpdateGUI(scrabble, null, null, s);
 	}
 }

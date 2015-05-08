@@ -77,6 +77,9 @@ public class UpdateGUI {
 	private String _fileToRead;
 	
 	private String[] _tokens = new String[6];
+	
+	
+	private String _gameInfo;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -89,10 +92,11 @@ public class UpdateGUI {
 	 * @param Reference to the BoardFrame class
 	 * @throws IOException
 	 */
-	public updateGUI(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf) throws IOException{
+	public UpdateGUI(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf, String gameInfo) throws IOException{
 	_b = b;
 	_bf = bf;
 	_scrabble = scrabble;
+	_gameInfo = gameInfo;
 	
 	JFrame jf = new JFrame();
 	FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.LOAD);
@@ -160,6 +164,8 @@ public class UpdateGUI {
 	
 	}
 
+	
+	
 public void updateBoard(){
 	String [] Tile_024s = new String[400];
 	String s = _tokens[5];

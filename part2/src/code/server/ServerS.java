@@ -22,7 +22,7 @@ public class ServerS implements ServerI, Runnable {
 	private ArrayList<ClientI> _observers;
 	
 	public ServerS(){ 
-		System.out.println("...server running...");
+		System.out.println("server running!");
 		_observers = new ArrayList<ClientI>();
 
 		
@@ -30,7 +30,7 @@ public class ServerS implements ServerI, Runnable {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		System.out.print("Client Requested to check whether there is a connection between the client and the server"");
 		
 	}
 

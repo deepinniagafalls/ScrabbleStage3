@@ -3,7 +3,6 @@ package code.server;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-import alphonce.i.IClient;
 import code.base.Board_024;
 import code.base.Player_024_047;
 import code.client.Game_047;

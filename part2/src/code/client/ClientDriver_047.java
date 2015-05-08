@@ -85,7 +85,7 @@ public class ClientDriver_047 {
 		}
 		
 		// Connection ready - start up the client!
-		SwingUtilities.invokeLater(new Game_047("Network", false, args[3], hostName, portNumber, null));
+		SwingUtilities.invokeLater(new Game_047("Network", false, args[3], hostName, portNumber, server));
 	}  
 
 	}

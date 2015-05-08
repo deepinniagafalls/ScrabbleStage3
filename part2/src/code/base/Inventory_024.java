@@ -83,6 +83,7 @@ public class Inventory_024 {
 	
 	public void loadInv(String letters){
 		for(int i = 0; i <letters.length(); i++){
+			System.out.println("hi");
 			_tileBag = new ArrayList<Tile_024>();
 			if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
 					_tileBag.add(new Tile_024((char)i,1));

@@ -107,7 +107,7 @@ public class SaveString {
 
 
 			_scrabble = s;
-			JFrame jf = new JFrame();
+			/*JFrame jf = new JFrame();
 			FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.SAVE);
 			//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
 			chooser.setDirectory("C:\\");chooser.setFile("*.txt");chooser.setVisible(true);
@@ -117,8 +117,10 @@ public class SaveString {
 			String filetoWrite = path + filename;
 			_fileToWriteTo = filetoWrite;
 			
+			
 			File file = new File(_fileToWriteTo);
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
+			*/
 			//String bw = new String();
 			
 			String boardsize = "20 20";

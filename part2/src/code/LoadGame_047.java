@@ -208,7 +208,8 @@ public void updateBoard(){
 				int blue = Integer.parseInt(numbers[1]);
 				System.out.println(numbers[2]);
 				int green = Integer.parseInt(numbers[2]);
-						
+				_b.clearBoard();
+				_bf.clearBoardFrame();
 				Color savedColor = new Color(red,blue,green);
 				
 				if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){

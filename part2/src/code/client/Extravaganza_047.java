@@ -387,7 +387,7 @@ public class Extravaganza_047 extends JFrame {
 			
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
 			// data is in a form of string
-			_server.passTurn(data);
+			//_server.passTurn(data);
 			int tep = _g.getCurrentTurn();
 			code.client.PlayerFrame_047 temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){ //Refills empty PlayerSpaces in the PlayerFrame

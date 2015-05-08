@@ -186,5 +186,8 @@ public class SaveGame_047 {
 		
 		
 	}
+	public String sendString(){
+		return "return the string that will be sent to the server";
+	}
 	
 }

@@ -326,19 +326,55 @@ public class PlayerFrame_047 {
 	public int getMyTurnNumber(){
 		return _myTurnNumber;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * @param temp: Local variable that holds reference to the PlayerSpace class
+	 * This method is responsible for setting the previous Playerpace that was clicked on to a temporary value
+	 */
 	public void setPreviousPlayerSpace(PlayerSpace_047 temp){
 		_previousPlayerSpace = temp;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * This method gets the value of the previous PlayerSpace to what was set to it before
+	 * @return Returns that value
+	 */
 	public PlayerSpace_047 getPreviousPlayerSpace(){
 		return _previousPlayerSpace;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * @param Local variable that holds the names of the players
+	 * This method sets the name of the players TileRacks to what they input at the beginning of the game
+	 */
 	public void setTitle(String name){
 		_frame.setTitle(name + "'s Tile Rack");
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * @param points: Local variable that holds the scores of the players
+	 * This method is responsible for setting the points that the players have to a point on their panel
+	 */
 	public void setPoints(String points){
 		_points.setText(points);
 	}

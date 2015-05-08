@@ -95,7 +95,16 @@ public class Inventory_024 {
 			}
 		}
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * This method is responsible for removing a random Tile from the Inventory
+	 * @return Returns a random tile from the Inventory
+	 */
 	public Tile_024 removeRandomTile(){
 		int randomIndex = new Random().nextInt(_tileBag.size()-1);
 		return _tileBag.remove(randomIndex);

@@ -145,7 +145,16 @@ public class Player_024_047 {
 	public String getName(){
 		return _myName;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @author shokoors (Shokoor Syed)
+	 * @date 2015-MARCH-7
+	 * @param name: Local variable that holds a String of names
+	 * This method is responsible for setting a name
+	 */
 	public void setName(String name){
 		_myName = name;
 	}

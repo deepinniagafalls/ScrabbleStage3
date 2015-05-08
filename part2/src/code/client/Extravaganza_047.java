@@ -121,7 +121,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
 	 * An int value that indicates turns
-	 /
+	 */
 	private int _currentTurn;
 	
 	/**
@@ -132,7 +132,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MAY-7
 	 * An int value that indicates how many players are playing the game
-	 * /
+	 */
 	private int _numberOfPlayers;
 	/**
 	 * @author tylerdie (Tyler Dietrich)

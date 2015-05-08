@@ -21,7 +21,7 @@ import code.i.*;
  * @author mjszymko (Michael Szymkowski)
  * @author shokoors (Shokoor Syed)
  * @date 2015-MARCH-7
- * This class created a client that can connet to the server and play the game within the hostname and portnumber
+ * This class created a client that can connect to the server and play the game within the hostname and portnumber
  */
 
 public class ClientDriver_047 {

@@ -21,12 +21,13 @@ public interface ClientI extends Remote {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
+	 * @param turn 
 	 * @date 2015-MARCH-7
 	 * @param s: Local variable that holds reference to the large string getting passed to the server
 	 * This method constantly updates that large string
 	 * @throws IOException 
 	 */
-	public void update(String s) throws RemoteException, IOException;
+	public void update(String s, String turn) throws RemoteException, IOException;
 
 
 }

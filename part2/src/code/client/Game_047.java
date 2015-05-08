@@ -272,6 +272,8 @@ public class Game_047 implements Runnable, ClientI {
 		for(int i = 0; i < _numberOfPlayers; i++){
 			_playerFrameList.add(new PlayerFrame_047(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
 		}
+		String player = _numberOfPlayers + "";
+		_server.start(player);
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
 		SaveString sunrise = new SaveString(board, boardframe, scrabble);
 		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server, sunrise);
@@ -447,8 +449,10 @@ public class Game_047 implements Runnable, ClientI {
 		
 	}
 
+
 	@Override
-	public void update(String s) throws IOException {
-		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);
+	public void update(String s, String turn) throws RemoteException,
+			IOException {
+		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);		
 	}
 }

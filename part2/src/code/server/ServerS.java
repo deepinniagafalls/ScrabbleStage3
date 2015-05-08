@@ -20,6 +20,8 @@ import code.i.ServerI;
  * This class is responsible for getting the server to run and function
  */
 public class ServerS implements ServerI, Runnable {
+	private int _number;
+	private int _turn;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -172,7 +174,7 @@ public class ServerS implements ServerI, Runnable {
 	 */
 	@Override
 	public void sendName(String name) throws RemoteException {
-		// TODO Auto-generated method stub
+		_number = Integer.parseInt(name);
 		
 	}
 	/**
@@ -189,8 +191,15 @@ public class ServerS implements ServerI, Runnable {
 	@Override
 	public void passTurn(String data) throws IOException {
 		//updates UI for the clients
+		if(_turn > _number){
+			_turn = 0;
+		}
+		else{
+			_turn++;
+		}
+		String turn = _turn + "";
 		for(ClientI c : _observers){
-			c.update(data);
+			c.update(data, turn);
 		}
 		
 	}

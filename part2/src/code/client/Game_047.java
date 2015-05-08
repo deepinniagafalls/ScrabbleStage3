@@ -137,7 +137,7 @@ public class Game_047 implements Runnable, ClientI {
 	 * @param sv: holds RMI stuff
 	 * Constructor for the Game class
 	 */
-	public Game_047(String s, boolean mode, String Name, String hostName, int portNumber, ServerI sv) throws IOException{
+	public Game_047(String s, boolean mode, String name, String hostName, int portNumber, ServerI sv) throws IOException{
 		   _server = sv;
 		   ClientI me = null;
 		   String e1 = "";
@@ -147,13 +147,13 @@ public class Game_047 implements Runnable, ClientI {
 	       String p = "";
 	       String path = "";
 	       System.out.print("Are you starting the game? Type Yes(1) or No(2) ");
-	       Scanner scan2n = new Scanner(System.in);
-	       String st = scan2n.nextLine();
+	       String st = JOptionPane.showInputDialog(null, "Are you starting the game? Type yes or no","START",JOptionPane.QUESTION_MESSAGE);	      
 	       boolean start = false;
-	       if(st == "1"){start = true; mode = true;} else{start = false; mode = false;}
+	       s = "GUI";
+	       if(st.equals("yes")){start = true;} else{start = false; mode = false;}
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
-		if(mode){
+		if(true){
 		if(s == "CUI"){
 			System.out.print("Please type in the path of the dictionary file. Press Enter instead to use the dictionary that is already provided with the code: ");
 		       Scanner ps = new Scanner(System.in);

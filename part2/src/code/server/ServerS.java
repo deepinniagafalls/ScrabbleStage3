@@ -124,7 +124,7 @@ public class ServerS implements ServerI, Runnable {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MARCH-7
-	 * This mehtod is responsible for running the server
+	 * This mehtod is used to check whether a client is connected.
 	 */
 	@Override
 	public void run() {
@@ -143,8 +143,13 @@ public class ServerS implements ServerI, Runnable {
 	 */
 	@Override
 	public void addClientI(ClientI c) throws RemoteException {
-		System.out.println("[SERVER] Adding client");
+		if(_observers.size() > 4){
+			System.out.println("No more client can join");
+		}
+		else{
+			System.out.println("[SERVER] Adding client");
 		_observers.add(c);
+		}
 		
 	}
 	/**
@@ -191,6 +196,7 @@ public class ServerS implements ServerI, Runnable {
 	@Override
 	public void passTurn(String data) throws IOException {
 		//updates UI for the clients
+		//this returns _turn to the client who will be playing at the next turn
 		if(_turn > _number){
 			_turn = 0;
 		}
@@ -199,7 +205,12 @@ public class ServerS implements ServerI, Runnable {
 		}
 		String turn = _turn + "";
 		for(ClientI c : _observers){
-			c.update(data, turn);
+			if(c == _observers.get(_number)){
+				c.update(data, turn);
+			}
+			else{
+				c.update(data, null);
+			}
 		}
 		
 	}

@@ -137,7 +137,7 @@ public class Game_047 implements Runnable, ClientI {
 	 * @param sv: holds RMI stuff
 	 * Constructor for the Game class
 	 */
-	public Game_047(String s, boolean mode, String Name, String hostName, int portNumber, ServerI sv) throws IOException{
+	public Game_047(String s, boolean mode, String name, String hostName, int portNumber, ServerI sv) throws IOException{
 		   _server = sv;
 		   ClientI me = null;
 		   String e1 = "";
@@ -146,9 +146,14 @@ public class Game_047 implements Runnable, ClientI {
 	       String e4 = "";
 	       String p = "";
 	       String path = "";
+	       System.out.print("Are you starting the game? Type Yes(1) or No(2) ");
+	       String st = JOptionPane.showInputDialog(null, "Are you starting the game? Type yes or no","START",JOptionPane.QUESTION_MESSAGE);	      
+	       boolean start = false;
+	       s = "GUI";
+	       if(st.equals("yes")){start = true;} else{start = false; mode = false;}
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
-		if(mode){
+		if(true){
 		if(s == "CUI"){
 			System.out.print("Please type in the path of the dictionary file. Press Enter instead to use the dictionary that is already provided with the code: ");
 		       Scanner ps = new Scanner(System.in);
@@ -261,8 +266,8 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		else{
 		_numberOfPlayers = 2;
-		_names.add("Frigg");
-		_names.add("Freya");
+		_names.add("Wait for");
+		_names.add("Other Player to pass a turn");
 		}
 		Scrabble_024_047 scrabble = new Scrabble_024_047(_numberOfPlayers, this);
 		Inventory_024 invent = scrabble.getInv();
@@ -281,7 +286,6 @@ public class Game_047 implements Runnable, ClientI {
 		_bf = boardframe;
 		
 		
-		/*
 		try {
 			boolean retry = false;
 			do {
@@ -316,7 +320,6 @@ public class Game_047 implements Runnable, ClientI {
 			e.printStackTrace();
 			System.exit(1);
 		}
-		*/
 	}
 
 	
@@ -453,6 +456,15 @@ public class Game_047 implements Runnable, ClientI {
 	@Override
 	public void update(String s, String turn) throws RemoteException,
 			IOException {
-		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);		
+		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);
+		for(int i = 0; i < _scrabble.getNumofPlayers(); i++){
+			_playerFrameList.get(i).setVisible(false);
+		if(turn == null){
+				_playerFrameList.get(i).setVisible(false);
+		}
+		else{
+			_playerFrameList.get(i).setVisible(true);
+		}
+	}
 	}
 }

@@ -43,6 +43,7 @@ public class HighScore_047 {
 	 * Instance variable that holds reference to an ArrayLsit of Strings
 	 */
 	ArrayList<String> _words;
+	
 	public HighScore_047(){
 	}
 	

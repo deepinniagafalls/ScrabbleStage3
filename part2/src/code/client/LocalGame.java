@@ -13,7 +13,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import code.SaveString;
-import code.UpdateGUI_047;
+import code.UpdateGUI;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
@@ -34,7 +34,7 @@ import java.util.Scanner.*;
  * @date 2015-MAY-7
  * Game class is responsible for instantiating all of the elements for the graphic user interface (GUI).
  */
-public class Game_047 implements Runnable, ClientI {
+public class LocalGame  {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -94,7 +94,7 @@ public class Game_047 implements Runnable, ClientI {
 	 * @date 2015-MAY-7
 	 * Instance variable that holds reference to the current turn
 	 */
-	private static Game_047 _currentGame;
+	private static LocalGame _currentGame;
 	private Scrabble_024_047 _scrabble;
 	private Board_024 _board;
 	private BoardFrame_047 _bf;
@@ -137,7 +137,7 @@ public class Game_047 implements Runnable, ClientI {
 	 * @param sv: holds RMI stuff
 	 * Constructor for the Game class
 	 */
-	public Game_047(String s, boolean mode, String name, String hostName, int portNumber, ServerI sv) throws IOException{
+	public LocalGame(String s, boolean mode, String name, String hostName, int portNumber, ServerI sv) throws IOException{
 		   _server = sv;
 		   ClientI me = null;
 		   String e1 = "";
@@ -356,7 +356,7 @@ public class Game_047 implements Runnable, ClientI {
 	 * Method that obtains the contents of the Game class
 	 * @return Returns the current game
 	 */
-	public Game_047 getGame(){
+	public LocalGame getGame(){
 		return _currentGame;
 	}
 	/**
@@ -446,28 +446,5 @@ public class Game_047 implements Runnable, ClientI {
 		}
 		System.out.println("The game is over, " + winner + " is the winner!");
 	}
-	
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		
 	}
-
-
-	@Override
-	public void update(String s, String turn) throws RemoteException,
-			IOException {
-		System.out.println(s);
-		UpdateGUI_047 update = new UpdateGUI_047(_scrabble, _board, _bf, s);
-		for(int i = 0; i < _scrabble.getNumofPlayers(); i++){
-			_playerFrameList.get(i).setVisible(false);
-		if(turn == null){
-				_playerFrameList.get(i).setVisible(false);
-		}
-		else{
-			_playerFrameList.get(i).setVisible(true);
-		}
-	}
-	}
-}

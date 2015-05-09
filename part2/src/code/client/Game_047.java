@@ -146,14 +146,16 @@ public class Game_047 implements Runnable, ClientI {
 	       String e4 = "";
 	       String p = "";
 	       String path = "";
-	       System.out.print("Are you starting the game? Type Yes(1) or No(2) ");
-	       String st = JOptionPane.showInputDialog(null, "Are you starting the game? Type yes or no","START",JOptionPane.QUESTION_MESSAGE);	      
+	       String st = JOptionPane.showInputDialog(null, "Are you starting the game? Type yes(1) or no(0)","START",JOptionPane.QUESTION_MESSAGE);	      
 	       boolean start = false;
 	       s = "GUI";
-	       if(st.equals("yes")){start = true;} else{start = false; mode = false;}
+	       int state = Integer.parseInt(st);
+	       System.out.println(state + "");
+	       if(state == 1){start = true; mode = true;}
+	       else{start = false; mode = false;}
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
-		if(true){
+		if(mode){
 		if(s == "CUI"){
 			System.out.print("Please type in the path of the dictionary file. Press Enter instead to use the dictionary that is already provided with the code: ");
 		       Scanner ps = new Scanner(System.in);
@@ -456,6 +458,7 @@ public class Game_047 implements Runnable, ClientI {
 	@Override
 	public void update(String s, String turn) throws RemoteException,
 			IOException {
+		System.out.println(s);
 		UpdateGUI update = new UpdateGUI(_scrabble, _board, _bf, s);
 		for(int i = 0; i < _scrabble.getNumofPlayers(); i++){
 			_playerFrameList.get(i).setVisible(false);

@@ -514,10 +514,12 @@ public class Extravaganza_047 extends JFrame {
 			try {
 				_server.passTurn(_sunrise.returnGameInfo());
 			} catch (IOException e1) {
-				System.out.print("hopeless now");
+				System.out.print("...");
 				e1.printStackTrace();
 			}
 		}
+
+
 	}
 	
 	/**

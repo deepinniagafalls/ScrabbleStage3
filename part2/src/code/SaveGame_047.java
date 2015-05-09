@@ -76,7 +76,7 @@ public class SaveGame_047 {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @author shokoors (Shokoor Syed)
 	 * @date 2015-MARCH-7
-	 * Instance variable that holds reference to a specidif file to write to
+	 * Instance variable that holds reference to a specific file to write to
 	 */
 	private String _fileToWriteTo;
 	

@@ -282,10 +282,11 @@ public class Game_047 implements Runnable, ClientI {
 		String player = _numberOfPlayers + "";
 		_server.start(player);
 		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
-		SaveString sunrise = new SaveString(board, boardframe, scrabble);
-		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server, sunrise);
 		_scrabble = scrabble;
 		_bf = boardframe;
+		SaveString sunrise = new SaveString(board, _bf, _scrabble);
+		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path, _server, sunrise);
+
 		
 		
 		try {
